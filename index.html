@@ -4,345 +4,425 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kenneth Sek | Markham Luxury Real Estate Broker | RE/MAX Realtron</title>
-<meta name="description" content="Markham home sellers average 108.9% of list price with Kenneth Sek, RE/MAX Realtron. Top 0.5% of TRREB. English and Cantonese. Free home valuation.">
-<meta property="og:title" content="Kenneth Sek | Markham Luxury Real Estate">
+<meta name="description" content="Sold above asking, by design. Kenneth Sek, RE/MAX Realtron: 108.9% average sale-to-list, top 0.5% of TRREB, cinematic marketing in English and Cantonese. Markham and Unionville.">
+<meta property="og:title" content="Kenneth Sek | Sold above asking. By design.">
 <meta property="og:image" content="https://kennethsek.com/listing_exterior.png">
+<meta name="theme-color" content="#1A1714">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Sans+HK:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0B1F3A;        /* deep RE/MAX-adjacent navy */
-  --ink-2:#16335C;
-  --paper:#F6F7F9;
-  --white:#FFFFFF;
-  --stone:#DDE2E8;
-  --mute:#5B6778;
-  --over:#D6202F;       /* used ONLY for "over asking" deltas */
+  --ink:#1A1714; --ink-2:#2B2620; --deep:#0F0D0B;
+  --paper:#F5F1E8; --white:#FBF9F4; --stone:#DDD5C5;
+  --mute:#6B6355; --mute-d:#B3A894;
+  --gold:#B8893A; --gold-b:#D4AE62; --gold-d:#8A6420;
   --serif:"Instrument Serif","Iowan Old Style",Georgia,serif;
   --sans:"Hanken Grotesk","Noto Sans HK",system-ui,-apple-system,"Segoe UI",sans-serif;
   --max:1200px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--over);outline-offset:3px;border-radius:2px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold-d);outline-offset:3px;border-radius:2px}
+.dk :focus-visible,.nav :focus-visible,footer :focus-visible{outline-color:var(--gold-b)}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em}
-h1{font-size:clamp(3rem,7.4vw,6.4rem)}
-h2{font-size:clamp(2.3rem,4.6vw,3.9rem)}
+h1{font-size:clamp(3.2rem,8vw,7rem)}
+h2{font-size:clamp(2.3rem,4.8vw,4rem)}
 h3{font-size:1.7rem;line-height:1.1}
-em{font-style:italic}
-p.lead{font-size:1.15rem;color:var(--mute);max-width:56ch}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:.98rem;border:1.5px solid var(--ink);transition:background .2s,color .2s}
+em{font-style:italic;color:var(--gold-d)}
+.dk{color:#F5F1E8}
+.dk em{color:var(--gold-b)}
+.dk .lead{color:var(--mute-d)}
+.lead{font-size:1.15rem;color:var(--mute);max-width:56ch}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-b)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 1.55rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:.98rem;border:1.5px solid var(--ink);cursor:pointer;background:none;transition:background .25s,color .25s,transform .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px)}
 .btn.solid{background:var(--ink);color:var(--white)}
 .btn.solid:hover{background:var(--ink-2)}
 .btn.ghost:hover{background:var(--ink);color:var(--white)}
-.btn.light{border-color:var(--white);color:var(--white)}
-.btn.light:hover{background:var(--white);color:var(--ink)}
-.btn.white{background:var(--white);color:var(--ink);border-color:var(--white)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.btn.gold:hover{background:var(--gold-b);border-color:var(--gold-b)}
+.btn.line{border-color:#F5F1E8;color:#F5F1E8}
+.btn.line:hover{background:#F5F1E8;color:var(--ink)}
+.sec{padding:110px 0}
+.sec-head{margin-bottom:46px}
+.sec-head .lead{margin-top:18px}
 
-/* ---------- NAV ---------- */
-header.nav{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--stone);padding-top:env(safe-area-inset-top,0px)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{height:38px;width:auto}
-.brand .fallback{font-family:var(--serif);font-size:1.5rem}
-.nav nav{display:flex;gap:26px;font-size:.95rem;font-weight:500}
-.nav nav a{text-decoration:none;color:var(--mute)}
-.nav nav a:hover{color:var(--ink)}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}
+
+/* progress + cursor */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:100}
+#cur{position:fixed;left:0;top:0;width:38px;height:38px;border:1.5px solid var(--gold-b);border-radius:50%;pointer-events:none;z-index:99;opacity:0;transition:width .25s,height .25s,background .25s,opacity .3s,margin .25s;mix-blend-mode:normal}
+#cur.on{opacity:.9}
+#cur.big{width:68px;height:68px;margin:-15px 0 0 -15px;background:rgba(212,174,98,.14)}
+@media(pointer:coarse){#cur{display:none}}
+
+/* NAV */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(26,23,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid #3A342B;padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;text-decoration:none}
+.brand img{height:40px;width:auto}
+.brand .fallback{font-family:var(--serif);font-size:1.5rem;color:#F5F1E8}
+.nav nav{display:flex;gap:26px;font-size:.93rem;font-weight:500}
+.nav nav a{text-decoration:none;color:var(--mute-d);transition:color .2s}
+.nav nav a:hover{color:#fff}
 .nav .right{display:flex;align-items:center;gap:12px}
-.lang{display:inline-flex;border:1.5px solid var(--stone);border-radius:999px;overflow:hidden}
-.lang button{border:0;background:none;font:inherit;font-size:.82rem;font-weight:600;padding:.4rem .8rem;cursor:pointer;color:var(--mute)}
-.lang button[aria-pressed=true]{background:var(--ink);color:var(--white)}
-.nav .btn{padding:.6rem 1.15rem;font-size:.9rem}
-@media(max-width:960px){.nav nav{display:none}}
+.lang{display:inline-flex;border:1.5px solid #4A4237;border-radius:999px;overflow:hidden}
+.lang button{border:0;background:none;font-size:.8rem;font-weight:600;padding:.4rem .8rem;cursor:pointer;color:var(--mute-d)}
+.lang button[aria-pressed=true]{background:var(--gold);color:var(--ink)}
+.nav .btn{padding:.6rem 1.15rem;font-size:.88rem}
+@media(max-width:1000px){.nav nav{display:none}}
 @media(max-width:560px){.nav .btn{display:none}}
 
-/* ---------- HERO ---------- */
-.hero{padding:56px 0 0;position:relative}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end}
-.hero h1 em{color:var(--ink-2)}
-.hero .sub{margin:26px 0 34px;font-size:1.2rem;color:var(--mute);max-width:50ch}
+/* HERO */
+.hero{position:relative;min-height:min(94vh,900px);display:flex;align-items:flex-end;background:var(--deep);color:#F5F1E8;overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:-6% 0;z-index:-2;will-change:transform}
+.hero .bg img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(15,13,11,.94) 0%,rgba(15,13,11,.72) 48%,rgba(15,13,11,.3) 100%),linear-gradient(0deg,rgba(15,13,11,.92),transparent 45%)}
+.hero .wrap{width:100%;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end;padding-top:120px;padding-bottom:64px}
+.hero h1{margin:20px 0 26px}
+.hero h1 em{color:var(--gold-b)}
+.hero .sub{font-size:1.2rem;color:#CFC6B4;max-width:52ch;margin-bottom:34px}
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-photo{position:relative;aspect-ratio:4/5;background:linear-gradient(160deg,var(--ink),var(--ink-2));border-radius:6px 6px 0 0;overflow:hidden}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
-.hero-photo .tag{position:absolute;left:16px;bottom:16px;right:16px;background:rgba(11,31,58,.88);color:var(--white);padding:14px 18px;border-radius:4px;font-size:.9rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.hero-photo .tag b{font-weight:600}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero-photo{aspect-ratio:4/4.2;max-width:520px}}
+.glass{background:rgba(26,23,20,.62);backdrop-filter:blur(14px);border:1px solid rgba(212,174,98,.35);border-radius:10px;padding:26px 28px}
+.glass small{display:block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-b);font-weight:600}
+.glass .addr{font-family:var(--serif);font-size:1.7rem;line-height:1.1;margin:10px 0 2px}
+.glass .loc{color:var(--mute-d);font-size:.9rem}
+.glass .was{margin-top:18px;color:#8C8171;text-decoration:line-through;text-decoration-thickness:2px;font-family:var(--serif);font-size:1.5rem}
+.glass .now{font-family:var(--serif);font-size:clamp(2.6rem,4.4vw,3.6rem);line-height:1;margin:2px 0 14px}
+.glass .delta{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;font-size:.95rem;padding:.45rem .9rem;border-radius:999px}
+.glass a{display:block;margin-top:18px;font-size:.9rem;color:var(--gold-b);font-weight:600}
+.scrollcue{position:absolute;left:50%;bottom:16px;width:1px;height:34px;background:linear-gradient(var(--gold-b),transparent);opacity:.7}
+@media(max-width:940px){.hero .wrap{grid-template-columns:1fr;padding-top:90px}.glass{max-width:420px}}
 
-/* price tape — the one memorable thing */
-.tape{background:var(--ink);color:var(--white);margin-top:0}
-.tape .wrap{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px;padding-top:34px;padding-bottom:34px}
-.tape .lbl{font-size:.85rem;color:#A9B7CC;line-height:1.35}
-.tape .lbl b{display:block;color:var(--white);font-size:1rem;font-weight:600}
-.tape .nums{display:flex;align-items:baseline;gap:22px;flex-wrap:wrap;font-family:var(--serif);font-size:clamp(2rem,4.4vw,3.6rem);line-height:1}
-.tape .was{color:#8195B3;text-decoration:line-through;text-decoration-thickness:2px}
-.tape .arrow{color:#8195B3;font-size:.6em}
-.tape .now{color:var(--white)}
-.tape .delta{background:var(--over);color:var(--white);font-family:var(--sans);font-weight:700;font-size:1rem;padding:.55rem .95rem;border-radius:999px;white-space:nowrap}
-.tape a{color:#A9B7CC;font-size:.9rem}
-@media(max-width:860px){.tape .wrap{grid-template-columns:1fr;gap:14px}}
+/* MARQUEE */
+.marq{background:var(--ink-2);color:var(--gold-b);overflow:hidden;border-top:1px solid #3A342B;border-bottom:1px solid #3A342B;padding:18px 0;white-space:nowrap}
+.marq .track{display:inline-flex;animation:mq 60s linear infinite}
+.marq:hover .track{animation-play-state:paused}
+.marq span{font-family:var(--serif);font-size:1.45rem;padding:0 28px;display:inline-flex;align-items:center;gap:56px}
+.marq span::after{content:"◆";font-size:.55rem;color:#8A6420}
+@keyframes mq{to{transform:translateX(-50%)}}
 
-/* ---------- PROOF ---------- */
-.proof{padding:84px 0 32px}
+/* STATS */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
-.stat{padding:26px 24px 8px 0}
+.stat{padding:28px 24px 8px 0}
 .stat+.stat{padding-left:24px;border-left:1px solid var(--stone)}
-.stat .n{font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.4rem);line-height:1}
-.stat .t{color:var(--mute);font-size:.95rem;margin-top:8px;max-width:22ch}
+.stat .n{font-family:var(--serif);font-size:clamp(3rem,5.4vw,4.8rem);line-height:1;font-variant-numeric:tabular-nums}
+.stat .t{color:var(--mute);font-size:.95rem;margin-top:10px;max-width:24ch}
+.creds{display:flex;gap:16px 36px;flex-wrap:wrap;align-items:center;margin-top:40px;padding-top:28px;border-top:1px solid var(--stone)}
+.creds img{height:58px;width:auto}
+.creds span{font-weight:600;font-size:.95rem}
 @media(max-width:820px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:0;padding-left:0}.stat{padding-bottom:24px}}
-.creds{display:flex;gap:14px 34px;flex-wrap:wrap;align-items:center;margin-top:34px;padding-top:26px;border-top:1px solid var(--stone);font-weight:600;font-size:.95rem}
-.creds img{height:54px;width:auto}
-.creds span.c{color:var(--mute);font-weight:500}
 
-/* ---------- FEATURED SALE ---------- */
-.feature{padding:96px 0}
-.feature-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
-.vid{position:relative;aspect-ratio:16/9;background:var(--ink);border-radius:6px;overflow:hidden;display:block}
-.vid img{width:100%;height:100%;object-fit:cover}
+/* STANDARD (accordion) */
+.std{background:var(--deep)}
+.panels{display:flex;gap:14px;height:520px}
+.panel{flex:1;position:relative;border:1px solid #3A342B;border-radius:10px;background:linear-gradient(170deg,#211D18,#15120F);overflow:hidden;cursor:pointer;text-align:left;padding:0;transition:flex .7s cubic-bezier(.2,.7,.2,1),border-color .3s}
+.panel:hover{border-color:var(--gold)}
+.panel.open{flex:2.6;border-color:var(--gold)}
+.panel .in{position:absolute;inset:0;padding:30px;display:flex;flex-direction:column;justify-content:space-between}
+.panel .num{font-family:var(--serif);font-size:4.4rem;line-height:1;color:var(--gold-b)}
+.panel h3{font-size:2rem;margin-bottom:12px}
+.panel .body{max-width:44ch;color:var(--mute-d);font-size:1rem;opacity:0;transform:translateY(12px);transition:opacity .5s .15s,transform .5s .15s}
+.panel.open .body{opacity:1;transform:none}
+.panel .proof{margin-top:16px;display:inline-block;color:var(--gold-b);font-weight:600;font-size:.95rem;opacity:0;transition:opacity .5s .25s}
+.panel.open .proof{opacity:1}
+.panel .plus{position:absolute;right:22px;top:24px;width:34px;height:34px;border:1.5px solid var(--gold-b);border-radius:50%;display:grid;place-items:center;color:var(--gold-b);font-size:1.3rem;line-height:1;transition:transform .4s}
+.panel.open .plus{transform:rotate(45deg)}
+@media(max-width:900px){
+  .panels{flex-direction:column;height:auto}
+  .panel{flex:none}.panel .in{position:static}
+  .panel .body,.panel .proof{opacity:1;transform:none}
+  .panel .plus{display:none}
+  .panel .num{margin-bottom:30px}
+}
+
+/* CASE STUDY */
+.case-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.vid{position:relative;aspect-ratio:16/9;background:var(--ink);border-radius:8px;overflow:hidden;display:block}
+.vid img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.vid:hover img{transform:scale(1.04)}
 .vid .play{position:absolute;inset:0;display:grid;place-items:center}
-.vid .play span{width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;transition:transform .2s}
-.vid:hover .play span{transform:scale(1.07)}
+.vid .play span{width:88px;height:88px;border-radius:50%;background:rgba(251,249,244,.95);display:grid;place-items:center;transition:transform .25s}
+.vid:hover .play span{transform:scale(1.08)}
 .vid .play svg{width:30px;height:30px;margin-left:4px}
-.vid .cap{position:absolute;left:14px;bottom:12px;background:rgba(11,31,58,.85);color:#fff;font-size:.8rem;padding:.3rem .7rem;border-radius:3px}
-.bars{margin:30px 0 26px}
-.bar{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;margin:12px 0;font-size:.95rem}
+.vid .cap{position:absolute;left:14px;bottom:12px;background:rgba(26,23,20,.85);color:#fff;font-size:.8rem;padding:.3rem .7rem;border-radius:3px}
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--stone);margin:28px 0 22px}
+.tabs button{background:none;border:0;border-bottom:3px solid transparent;padding:.7rem 1.1rem;font-weight:600;color:var(--mute);cursor:pointer;margin-bottom:-1px}
+.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--gold)}
+.tabpanel[hidden]{display:none}
+.tabpanel ul{list-style:none}
+.tabpanel li{padding:10px 0;border-top:1px solid var(--stone);color:var(--mute)}
+.tabpanel li:first-child{border-top:0}
+.bar{display:grid;grid-template-columns:66px 1fr auto;gap:14px;align-items:center;margin:12px 0;font-size:.95rem}
 .bar .track{height:30px;background:var(--stone);border-radius:3px;position:relative;overflow:hidden}
 .bar .fill{position:absolute;inset:0 auto 0 0;background:var(--ink);width:0;transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
-.bar .fill.over{background:var(--ink)}
-.bar .fill .extra{position:absolute;right:0;top:0;bottom:0;background:var(--over)}
-.bar b{font-variant-numeric:tabular-nums}
-.feature ul{list-style:none;margin:6px 0 28px;color:var(--mute)}
-.feature li{padding:8px 0;border-top:1px solid var(--stone)}
-@media(max-width:900px){.feature-grid{grid-template-columns:1fr;gap:36px}}
+.bar .fill .x{position:absolute;right:0;top:0;bottom:0;background:var(--gold)}
+.pctbig{font-family:var(--serif);font-size:3.2rem;line-height:1;margin-top:14px}
+.pctbig small{font-family:var(--sans);font-size:.9rem;color:var(--mute);margin-left:8px}
+@media(max-width:900px){.case-grid{grid-template-columns:1fr;gap:36px}}
 
-/* ---------- LEDGER ---------- */
-.ledger{background:var(--white);padding:96px 0;border-top:1px solid var(--stone);border-bottom:1px solid var(--stone)}
-.ledger-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+/* LEDGER */
+.ledger{background:var(--white);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone)}
+.tools{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:26px}
 .filters{display:flex;gap:8px;flex-wrap:wrap}
-.filters button{font:inherit;font-size:.9rem;font-weight:600;border:1.5px solid var(--stone);background:none;border-radius:999px;padding:.5rem 1.05rem;cursor:pointer;color:var(--mute)}
+.filters button{font-size:.9rem;font-weight:600;border:1.5px solid var(--stone);background:none;border-radius:999px;padding:.5rem 1.05rem;cursor:pointer;color:var(--mute)}
 .filters button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--white)}
+.tools input,.tools select{font:inherit;font-size:.92rem;padding:.55rem .95rem;border:1.5px solid var(--stone);border-radius:999px;background:var(--paper);color:var(--ink)}
+.tools input{min-width:220px}
+.tools .sp{flex:1}
 .table{width:100%;border-collapse:collapse}
 .table th{text-align:left;font-size:.82rem;font-weight:600;color:var(--mute);padding:10px 12px;border-bottom:2px solid var(--ink)}
-.table td{padding:17px 12px;border-bottom:1px solid var(--stone);vertical-align:baseline}
+.table td{padding:18px 12px;border-bottom:1px solid var(--stone);vertical-align:middle}
+.table tbody tr{transition:background .2s}
+.table tbody tr:hover{background:var(--paper)}
 .table td.addr{font-family:var(--serif);font-size:1.45rem;line-height:1.1}
 .table td.addr small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--mute);margin-top:4px}
 .table td.price{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
 .pill{display:inline-block;font-size:.78rem;font-weight:600;padding:.25rem .65rem;border-radius:999px;background:var(--paper);border:1px solid var(--stone);white-space:nowrap}
-.over-t{color:var(--over);font-weight:700;white-space:nowrap}
+.over-t{color:var(--gold-d);font-weight:700;white-space:nowrap}
 .under-t{color:var(--mute);white-space:nowrap}
-.more{margin-top:28px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-.note{color:var(--mute);font-size:.88rem;margin-top:18px;max-width:80ch}
+.mini{height:5px;width:120px;background:var(--stone);border-radius:3px;margin-top:6px;overflow:hidden}
+.mini i{display:block;height:100%;background:var(--gold)}
+.pctl{font-size:.8rem;color:var(--mute);margin-top:4px}
+.empty{padding:34px 12px;color:var(--mute)}
+.note{color:var(--mute);font-size:.88rem;margin-top:22px;max-width:80ch}
 @media(max-width:760px){
   .table thead{display:none}
   .table,.table tbody,.table tr,.table td{display:block;width:100%}
   .table tr{padding:16px 0;border-bottom:1px solid var(--stone)}
   .table td{border:0;padding:3px 0}
+  .tools input{min-width:0;width:100%}
 }
 
-/* ---------- LUXURY ---------- */
-.lux{padding:100px 0;background:var(--ink);color:var(--white)}
-.lux h2 em{color:#AFC4E6}
-.lux-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.gallery{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:240px 240px;gap:12px}
-.gallery figure{position:relative;overflow:hidden;border-radius:4px;background:var(--ink-2)}
-.gallery figure:first-child{grid-row:1/3}
-.gallery img{width:100%;height:100%;object-fit:cover}
-.gallery figcaption{position:absolute;left:10px;bottom:10px;background:rgba(11,31,58,.85);font-size:.78rem;padding:.25rem .6rem;border-radius:3px}
-.lux dl{margin-top:34px}
-.lux dt{font-family:var(--serif);font-size:1.5rem;margin-top:22px}
-.lux dd{color:#B8C5DA;font-size:.98rem;max-width:52ch}
-.lux .cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
-@media(max-width:900px){.lux-grid{grid-template-columns:1fr;gap:40px}.gallery{grid-template-rows:200px 200px}}
+/* STRATEGY BUILDER */
+.strat{background:var(--ink)}
+.strat-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+.sbox{background:#221E19;border:1px solid #3A342B;border-radius:12px;padding:34px;min-height:430px;display:flex;flex-direction:column}
+.dots{display:flex;gap:8px;margin-bottom:22px}
+.dots i{height:4px;flex:1;background:#3A342B;border-radius:2px;transition:background .4s}
+.dots i.on{background:var(--gold)}
+.sbox .stepno{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-b);font-weight:600}
+.sbox h3{font-size:2.1rem;margin:10px 0 24px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opts button{background:transparent;border:1.5px solid #4A4237;border-radius:8px;padding:1.05rem 1.1rem;text-align:left;font-weight:600;cursor:pointer;color:#F5F1E8;transition:border-color .2s,background .2s,transform .2s}
+.opts button:hover{border-color:var(--gold-b);background:rgba(212,174,98,.08);transform:translateY(-2px)}
+.sbox .back{margin-top:auto;padding-top:22px;background:none;border:0;color:var(--mute-d);cursor:pointer;text-align:left;font-size:.9rem;width:max-content}
+.plan{list-style:none;margin:6px 0 26px}
+.plan li{padding:14px 0;border-top:1px solid #3A342B;display:grid;grid-template-columns:120px 1fr;gap:16px}
+.plan li b{color:var(--gold-b);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding-top:3px}
+.plan li span{color:#D8D0BE}
+.sbox .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:auto}
+@media(max-width:900px){.strat-grid{grid-template-columns:1fr;gap:36px}.opts{grid-template-columns:1fr}.plan li{grid-template-columns:1fr;gap:4px}}
 
-/* ---------- CINEMATIC ---------- */
-.film{background:#07142A;color:var(--white);padding:120px 0 110px;text-align:center}
+/* FILM */
+.film{background:var(--deep);text-align:center}
 .film h2{font-size:clamp(3.2rem,8.4vw,7.4rem);line-height:.98;max-width:13ch;margin:0 auto}
-.film h2 em{color:#AFC4E6}
-.film .lead{color:#B8C5DA;margin:30px auto 0;max-width:52ch;font-size:1.2rem}
-.film .player{position:relative;margin:64px auto 0;max-width:1040px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.45)}
-.film .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.film .meta{display:flex;justify-content:center;gap:clamp(24px,6vw,72px);flex-wrap:wrap;margin-top:34px}
-.film .meta div{text-align:left}
-.film .meta b{display:block;font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1.1}
-.film .meta span{font-size:.88rem;color:#A9B7CC}
+.film .lead{margin:30px auto 0;font-size:1.2rem;max-width:54ch}
+.ftabs{display:inline-flex;gap:6px;margin-top:44px;border:1.5px solid #4A4237;border-radius:999px;padding:5px}
+.ftabs button{border:0;background:none;border-radius:999px;padding:.6rem 1.2rem;font-weight:600;color:var(--mute-d);cursor:pointer;font-size:.92rem}
+.ftabs button[aria-selected=true]{background:var(--gold);color:var(--ink)}
+.player{position:relative;margin:26px auto 0;max-width:1040px;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.meta{display:flex;justify-content:center;gap:clamp(24px,6vw,72px);flex-wrap:wrap;margin-top:34px}
+.meta div{text-align:left}
+.meta b{display:block;font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1.1}
+.meta span{font-size:.88rem;color:var(--mute-d)}
 .film .cta{margin-top:44px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-/* ---------- BILINGUAL ---------- */
-.bi{padding:96px 0}
-.bi-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
-.zh{font-family:"Noto Sans HK",var(--sans);font-size:1.35rem;font-weight:700;line-height:1.4;border-left:4px solid var(--over);padding-left:18px;margin:26px 0}
-.video{aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:var(--ink)}
-.video iframe{width:100%;height:100%;border:0}
-@media(max-width:900px){.bi-grid{grid-template-columns:1fr}}
+/* LUXURY GALLERY */
+.lux-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+.gallery{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:250px 250px;gap:12px}
+.gallery button{position:relative;overflow:hidden;border-radius:6px;border:0;padding:0;background:var(--ink-2);cursor:zoom-in}
+.gallery button:first-child{grid-row:1/3}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.gallery button:hover img{transform:scale(1.07)}
+.gallery span{position:absolute;left:10px;bottom:10px;background:rgba(26,23,20,.85);color:#fff;font-size:.78rem;padding:.25rem .6rem;border-radius:3px}
+dialog#lb{border:0;background:transparent;max-width:min(94vw,1200px);max-height:92vh;padding:0;overflow:visible}
+dialog#lb::backdrop{background:rgba(15,13,11,.92)}
+dialog#lb img{max-width:94vw;max-height:84vh;border-radius:6px;margin:auto}
+dialog#lb .x{position:absolute;right:-6px;top:-46px;background:none;border:1.5px solid #F5F1E8;color:#F5F1E8;border-radius:999px;padding:.35rem 1rem;cursor:pointer;font-weight:600}
+dialog#lb p{color:#D8D0BE;text-align:center;margin-top:12px;font-size:.9rem}
+.lux dl{margin-top:30px}
+.lux dt{font-family:var(--serif);font-size:1.55rem;margin-top:22px}
+.lux dd{color:var(--mute);max-width:52ch}
+.lux .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:900px){.lux-grid{grid-template-columns:1fr;gap:40px}.gallery{grid-template-rows:200px 200px}}
 
-/* ---------- STORY ---------- */
-.story{padding:20px 0 100px}
+/* BAND */
+.band{background:var(--gold);color:var(--ink);padding:70px 0}
+.band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.band h2 em{color:var(--ink)}
+.band .zh{font-family:"Noto Sans HK",var(--sans);font-size:1.6rem;font-weight:700;line-height:1.4;border-left:4px solid var(--ink);padding-left:20px}
+.band p{margin-top:12px;font-size:1.05rem;max-width:50ch}
+@media(max-width:900px){.band .wrap{grid-template-columns:1fr}}
+
+/* STORY */
 .story-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
-.story .pic{aspect-ratio:4/5;background:linear-gradient(160deg,var(--ink),var(--ink-2));border-radius:6px;overflow:hidden}
-.story .pic img{width:100%;height:100%;object-fit:cover;object-position:top}
+.pic{aspect-ratio:4/5;background:linear-gradient(160deg,var(--ink-2),var(--ink));border-radius:8px;overflow:hidden}
+.pic img{width:100%;height:100%;object-fit:cover;object-position:top}
 .story p{margin:20px 0;max-width:58ch}
-blockquote{font-family:var(--serif);font-size:1.9rem;line-height:1.2;border-top:2px solid var(--ink);padding-top:22px;margin:30px 0;max-width:30ch}
+blockquote{font-family:var(--serif);font-size:1.9rem;line-height:1.2;border-top:2px solid var(--gold);padding-top:22px;margin:30px 0 0;max-width:30ch}
 blockquote cite{display:block;font-family:var(--sans);font-size:.9rem;color:var(--mute);font-style:normal;margin-top:12px}
-.awards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:64px}
-.award{background:var(--white);border:1px solid var(--stone);border-radius:6px;overflow:hidden}
-.award .im{aspect-ratio:4/3;background:var(--stone)}
+.awards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:70px}
+.award{background:var(--white);border:1px solid var(--stone);border-radius:8px;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.award:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(26,23,20,.14)}
+.award .im{aspect-ratio:4/3;background:var(--stone);overflow:hidden}
 .award .im img{width:100%;height:100%;object-fit:cover}
 .award p{padding:14px 16px 18px;font-size:.92rem;margin:0;color:var(--mute)}
 .award p b{display:block;color:var(--ink)}
-@media(max-width:900px){.story-grid{grid-template-columns:1fr}.story .pic{max-width:440px}.awards{grid-template-columns:1fr}}
+@media(max-width:900px){.story-grid{grid-template-columns:1fr}.pic{max-width:440px}.awards{grid-template-columns:1fr}}
 
-/* ---------- REVIEWS ---------- */
-.reviews{background:var(--white);padding:96px 0;border-top:1px solid var(--stone)}
+/* REVIEWS */
+.reviews{background:var(--white);border-top:1px solid var(--stone)}
 .rev-head{display:flex;gap:28px;align-items:end;justify-content:space-between;flex-wrap:wrap;margin-bottom:38px}
 .score{font-family:var(--serif);font-size:5rem;line-height:.9}
 .score small{display:block;font-family:var(--sans);font-size:.9rem;color:var(--mute);margin-top:6px}
-.rgrid{columns:3 280px;column-gap:22px}
-.rev{break-inside:avoid;margin:0 0 22px;padding:24px;border:1px solid var(--stone);border-radius:6px;background:var(--paper)}
-.rev .st{color:var(--over);letter-spacing:2px;font-size:.95rem}
-.rev p{margin:10px 0 14px;font-size:1rem}
-.rev b{font-size:.9rem}
-.rev span{color:var(--mute);font-size:.85rem}
+.car{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px;scrollbar-width:thin}
+.rev{flex:0 0 min(380px,86%);scroll-snap-align:start;padding:28px;border:1px solid var(--stone);border-radius:10px;background:var(--paper)}
+.rev .st{color:var(--gold-d);letter-spacing:3px}
+.rev p{margin:12px 0 16px;font-size:1.05rem}
+.rev b{font-size:.9rem}.rev span{color:var(--mute);font-size:.85rem}
+.arrows{display:flex;gap:10px}
+.arrows button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--ink);background:none;cursor:pointer;font-size:1.2rem;transition:background .2s,color .2s}
+.arrows button:hover{background:var(--ink);color:var(--white)}
 
-/* ---------- STEPS ---------- */
-.steps{padding:96px 0}
-.step-list{counter-reset:s;list-style:none;margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--ink)}
-.step-list li{counter-increment:s;padding:26px 22px 8px 0}
-.step-list li+li{padding-left:22px;border-left:1px solid var(--stone)}
-.step-list li::before{content:counter(s);font-family:var(--serif);font-size:3rem;line-height:1;display:block;margin-bottom:10px}
-.step-list b{display:block;font-size:1.05rem;margin-bottom:6px}
-.step-list p{color:var(--mute);font-size:.95rem}
-@media(max-width:900px){.step-list{grid-template-columns:1fr 1fr}.step-list li:nth-child(3){border-left:0;padding-left:0}}
-@media(max-width:520px){.step-list{grid-template-columns:1fr}.step-list li+li{border-left:0;padding-left:0;border-top:1px solid var(--stone)}}
-
-/* ---------- ESTIMATOR ---------- */
-.est{background:var(--ink);color:var(--white);padding:84px 0}
+/* ESTIMATOR */
+.est{background:var(--ink)}
 .est-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .est label{display:block;font-weight:600;margin-bottom:10px}
-.est input[type=range]{width:100%;accent-color:var(--over);height:34px}
-.est .out{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.est .box{border:1px solid #2E4A75;border-radius:6px;padding:18px}
-.est .box small{display:block;color:#A9B7CC;font-size:.82rem}
-.est .box b{font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1.1}
-.est .box.hot{background:var(--over);border-color:var(--over)}
-.est .box.hot small{color:#FFD7DA}
-.est .fine{font-size:.82rem;color:#A9B7CC;margin-top:16px;max-width:60ch}
+.est input[type=range]{width:100%;accent-color:var(--gold);height:34px}
+.out{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.box{border:1px solid #4A4237;border-radius:8px;padding:18px}
+.box small{display:block;color:var(--mute-d);font-size:.82rem}
+.box b{font-family:var(--serif);font-weight:400;font-size:2.1rem;line-height:1.1}
+.box.hot{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.box.hot small{color:rgba(26,23,20,.75)}
+.fine{font-size:.82rem;color:var(--mute-d);margin-top:16px;max-width:60ch}
 @media(max-width:900px){.est-grid{grid-template-columns:1fr;gap:34px}}
 
-/* ---------- CONTACT ---------- */
-.contact{padding:100px 0}
+/* CONTACT */
 .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px}
 .info p{margin:22px 0 0}
 .info small{display:block;color:var(--mute);font-size:.85rem}
-.info a{font-size:1.25rem;font-weight:600;text-decoration:none;border-bottom:2px solid var(--stone)}
-.info a:hover{border-color:var(--ink)}
-form{background:var(--white);border:1px solid var(--stone);border-radius:8px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.info a{font-size:1.25rem;font-weight:600;text-decoration:none;border-bottom:2px solid var(--gold)}
+form{background:var(--white);border:1px solid var(--stone);border-radius:12px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
 form .full{grid-column:1/-1}
 form label{display:block;font-size:.88rem;font-weight:600;margin-bottom:6px}
-form input,form select,form textarea{width:100%;font:inherit;padding:.8rem .9rem;border:1.5px solid var(--stone);border-radius:5px;background:var(--paper);color:var(--ink)}
+form input,form select,form textarea{width:100%;font:inherit;padding:.8rem .9rem;border:1.5px solid var(--stone);border-radius:6px;background:var(--paper);color:var(--ink)}
 form textarea{min-height:100px;resize:vertical}
 form .consent{font-size:.78rem;color:var(--mute);line-height:1.45}
 form .hp{position:absolute;left:-9999px}
-#sent{display:none;padding:16px;border-radius:6px;background:#E8F1EA;color:#14532D;font-weight:600}
+#sent{display:none;padding:16px;border-radius:6px;background:#EFE6CF;color:#4A3512;font-weight:600}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:36px}form{grid-template-columns:1fr;padding:22px}}
 
-/* ---------- AREAS + FOOTER ---------- */
-.areas{padding:0 0 90px}
+/* AREAS + FOOTER */
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.chips a{border:1.5px solid var(--ink);border-radius:999px;padding:.55rem 1.1rem;text-decoration:none;font-weight:600;font-size:.95rem}
+.chips a{border:1.5px solid var(--ink);border-radius:999px;padding:.55rem 1.1rem;text-decoration:none;font-weight:600;font-size:.95rem;transition:background .2s,color .2s}
 .chips a:hover{background:var(--ink);color:var(--white)}
-footer{background:var(--ink);color:#B8C5DA;padding:60px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:.9rem}
+footer{background:var(--ink);color:var(--mute-d);padding:60px 0 calc(110px + env(safe-area-inset-bottom,0px));font-size:.9rem}
 footer .top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:34px}
 footer img{height:44px;width:auto;margin-bottom:12px}
-footer a{text-decoration:none}
-footer a:hover{color:#fff}
+footer a{text-decoration:none}footer a:hover{color:#fff}
 footer .soc{display:flex;gap:18px;font-weight:600}
-footer .legal{border-top:1px solid #1F3A63;padding-top:22px;font-size:.82rem;line-height:1.6}
-.imgfail{background:linear-gradient(160deg,var(--ink),var(--ink-2))}
+footer .legal{border-top:1px solid #3A342B;padding-top:22px;font-size:.82rem;line-height:1.6}
 
-/* one orchestrated entrance: hero only */
-@media(prefers-reduced-motion:no-preference){
-  .hero h1,.hero .sub,.hero .cta,.hero-photo{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
-  .hero .sub{animation-delay:.1s}.hero .cta{animation-delay:.2s}.hero-photo{animation-delay:.15s}
-  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+/* floating consult */
+#fab{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;gap:8px;align-items:center;transform:translateY(140%);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+#fab.show{transform:none}
+#fab .btn{box-shadow:0 14px 34px rgba(0,0,0,.28)}
+#fab .call{width:52px;height:52px;padding:0;justify-content:center;background:var(--ink);border-color:var(--gold);color:var(--gold-b)}
+@media(max-width:560px){#fab{left:14px;right:14px}#fab .btn.gold{flex:1;justify-content:center}}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .marq .track{animation:none;flex-wrap:wrap;white-space:normal}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .bar .fill,.panel,.panel .body{transition:none}
+  #cur{display:none}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar .fill{transition:none}}
 </style>
 </head>
 <body>
+<div id="prog" aria-hidden="true"></div>
+<div id="cur" aria-hidden="true"></div>
 
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Kenneth Sek Homes">
-      <img src="https://kennethsek.com/logo.png" alt="Kenneth Sek Homes" referrerpolicy="no-referrer" onerror="this.outerHTML='<span class=fallback>Kenneth Sek</span>'">
+      <img src="https://kennethsek.com/logo_white.png" alt="Kenneth Sek Homes" referrerpolicy="no-referrer" onerror="this.outerHTML='<span class=fallback>Kenneth Sek</span>'">
     </a>
     <nav aria-label="Main">
+      <a href="#standard" data-i="n_std">The Standard</a>
       <a href="#results" data-i="n_results">Results</a>
-      <a href="#luxury" data-i="n_luxury">Luxury</a>
+      <a href="#strategy" data-i="n_strat">Your Strategy</a>
       <a href="#film" data-i="n_film">Film</a>
       <a href="#story" data-i="n_about">About</a>
       <a href="#reviews" data-i="n_reviews">Reviews</a>
-      <a href="#areas" data-i="n_areas">Areas</a>
     </nav>
     <div class="right">
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-lang="en" aria-pressed="true">EN</button>
         <button type="button" data-lang="zh" aria-pressed="false">中文</button>
       </div>
-      <a class="btn solid" href="#contact" data-i="n_cta">Free valuation</a>
+      <a class="btn gold" href="#contact" data-i="n_cta">Private consultation</a>
     </div>
   </div>
 </header>
 
 <main id="top">
+
 <!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
+<section class="hero dk">
+  <div class="bg" id="heroBg"><img src="https://kennethsek.com/listing_exterior.png" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+  <div class="wrap">
     <div>
-      <h1 data-i="h1">Markham homes sell for <em>more</em> with Kenneth.</h1>
-      <p class="sub" data-i="sub">Ten years in the GTA, a builder and developer network, and a bilingual marketing plan that reaches every qualified buyer. Prepared before the first showing.</p>
+      <span class="eyebrow" data-i="eyebrow">Kenneth Sek · Broker · RE/MAX Realtron</span>
+      <h1 data-i="h1">Sold above asking. <em>By design.</em></h1>
+      <p class="sub" data-i="sub">A builder-network background, cinematic marketing and a Certified Negotiation Expert at the table. 81% of Kenneth’s listings sold over asking, averaging 108.9% of list price.</p>
       <div class="cta">
-        <a class="btn solid" href="#contact" data-i="cta1">Get my free valuation</a>
-        <a class="btn ghost" href="#results" data-i="cta2">See every sale</a>
+        <a class="btn gold" href="#strategy" data-i="cta1">Build my private strategy</a>
+        <a class="btn line" href="#results" data-i="cta2">Explore every sale</a>
       </div>
     </div>
-    <div class="hero-photo">
-      <img src="https://kennethsek.com/headshot_hero.webp" alt="Kenneth Sek, Markham real estate broker" referrerpolicy="no-referrer" onerror="this.src='https://kennethsek.com/headshot_about.webp';this.onerror=function(){this.style.display='none'}">
-      <div class="tag"><b>Kenneth Sek, Broker</b><span data-i="tag">RE/MAX Realtron · Unionville, Markham</span></div>
-    </div>
+    <aside class="glass" aria-label="Recent result">
+      <small data-i="gl">Recent result</small>
+      <div class="addr">19 Duke of Cornwall Dr</div>
+      <div class="loc">Victoria Square, Markham · 5 bed · 5 bath</div>
+      <div class="was">Listed $1,888,000</div>
+      <div class="now" id="tNow">$2,122,888</div>
+      <span class="delta">+$234,888 over asking</span>
+      <a href="#case" data-i="glink">Read the case study →</a>
+    </aside>
   </div>
+  <span class="scrollcue" aria-hidden="true"></span>
 </section>
 
-<!-- PRICE TAPE -->
-<section class="tape" aria-label="Featured result">
-  <div class="wrap">
-    <div class="lbl"><b>19 Duke of Cornwall Dr</b><span data-i="tapeLoc">Victoria Square, Markham</span></div>
-    <div class="nums" aria-live="off">
-      <span class="was" id="tWas">$1,888,000</span>
-      <span class="arrow" aria-hidden="true">listed → sold</span>
-      <span class="now" id="tNow">$2,122,888</span>
-      <span class="delta" id="tDelta">+$234,888 over asking</span>
-    </div>
-    <a href="#feature" data-i="tapeLink">See how</a>
-  </div>
-</section>
+<!-- MARQUEE -->
+<div class="marq" aria-label="Credentials and results"><div class="track" id="mq"></div></div>
 
-<!-- PROOF -->
-<section class="proof">
+<!-- STATS -->
+<section class="sec" id="proof">
   <div class="wrap">
     <div class="stats">
-      <div class="stat"><div class="n">108.9%</div><div class="t" data-i="s1">Average sale-to-list price on Kenneth’s listings</div></div>
-      <div class="stat"><div class="n">81%</div><div class="t" data-i="s2">Of his listings sold over asking</div></div>
-      <div class="stat"><div class="n">$63M</div><div class="t" data-i="s3">53 homes sold and bought since 2022</div></div>
-      <div class="stat"><div class="n">4.9</div><div class="t" data-i="s4">Google rating from 32 reviews</div></div>
+      <div class="stat rv"><div class="n" data-count="108.9" data-dec="1" data-suf="%">108.9%</div><div class="t" data-i="s1">Average sale-to-list price on Kenneth’s listings</div></div>
+      <div class="stat rv d1"><div class="n" data-count="81" data-suf="%">81%</div><div class="t" data-i="s2">Of his listings sold over asking</div></div>
+      <div class="stat rv d2"><div class="n" data-count="63" data-pre="$" data-suf="M">$63M</div><div class="t" data-i="s3">53 homes sold and bought since 2022</div></div>
+      <div class="stat rv d3"><div class="n" data-count="4.9" data-dec="1">4.9</div><div class="t" data-i="s4">Google rating from 32 reviews</div></div>
     </div>
-    <div class="creds">
+    <div class="creds rv">
       <span data-i="c1">Top 0.5% of TRREB agents</span>
-      <span class="c" data-i="c2">RE/MAX Top 100 in Ontario</span>
-      <span class="c">CNE Certified Negotiation Expert</span>
+      <span>RE/MAX Top 100 in Ontario</span>
+      <span>Certified Negotiation Expert</span>
       <img src="https://kennethsek.com/clhms_badge.png" alt="CLHMS Elite Guild" referrerpolicy="no-referrer" onerror="this.style.display='none'">
       <img src="https://kennethsek.com/badge_rankMyAgent_transparent.webp" alt="RankMyAgent Best of Markham 2025" referrerpolicy="no-referrer" onerror="this.style.display='none'">
       <img src="https://kennethsek.com/sres_badge.png" alt="SRES Seniors Real Estate Specialist" referrerpolicy="no-referrer" onerror="this.style.display='none'">
@@ -350,124 +430,173 @@ footer .legal{border-top:1px solid #1F3A63;padding-top:22px;font-size:.82rem;lin
   </div>
 </section>
 
-<!-- FEATURED SALE -->
-<section class="feature" id="feature">
-  <div class="wrap feature-grid">
-    <a class="vid" href="#film" aria-label="Watch the 19 Duke of Cornwall listing film">
-      <img src="https://i.ytimg.com/vi/xNPaFZOCZbA/maxresdefault.jpg" alt="19 Duke of Cornwall Dr, Victoria Square, Markham" referrerpolicy="no-referrer" onerror="this.style.display='none'">
-      <span class="play"><span><svg viewBox="0 0 24 24" fill="#0B1F3A"><path d="M6 4l14 8-14 8z"/></svg></span></span>
-      <span class="cap" data-i="watch">Watch the listing video</span>
-    </a>
-    <div>
-      <h2 data-i="fh">A $1.89M listing that sold for <em>$2.12M.</em></h2>
-      <div class="bars" id="bars">
-        <div class="bar"><span data-i="listed">Listed</span><div class="track"><div class="fill" data-w="89"></div></div><b>$1,888,000</b></div>
-        <div class="bar"><span data-i="sold">Sold</span><div class="track"><div class="fill" data-w="100"><div class="extra" style="width:11%"></div></div></div><b>$2,122,888</b></div>
-      </div>
-      <ul>
-        <li data-i="f1">5 bed, 5 bath in Victoria Square, sold April 2025</li>
-        <li data-i="f2">Over $300,000 in premium upgrades, Gaggenau kitchen, smart home automation</li>
-        <li data-i="f3">Professional staging, targeted marketing and bilingual buyer reach</li>
-      </ul>
-      <a class="btn solid" href="#contact" data-i="fcta">Plan my sale like this</a>
+<!-- THE STANDARD -->
+<section class="sec std dk" id="standard">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i="stdE">The Kenneth standard</span>
+      <h2 style="margin-top:14px" data-i="stdH">Three things decide <em>your price.</em></h2>
+      <p class="lead" data-i="stdP">Preparation, presentation and negotiation. Select each to see how Kenneth works.</p>
+    </div>
+    <div class="panels rv" id="panels">
+      <button class="panel open" aria-expanded="true">
+        <span class="plus" aria-hidden="true">+</span>
+        <span class="in"><span class="num">01</span><span><h3 data-i="pa1">Preparation</h3><span class="body" data-i="pa1b" style="display:block">Before becoming a broker, Kenneth spent years inside the builder and developer world across the GTA, learning how homes are priced, built and sold. Problems are found and solved before a buyer finds them.</span><span class="proof">A decade of builder and developer relationships</span></span></span>
+      </button>
+      <button class="panel" aria-expanded="false">
+        <span class="plus" aria-hidden="true">+</span>
+        <span class="in"><span class="num">02</span><span><h3 data-i="pa2">Presentation</h3><span class="body" data-i="pa2b" style="display:block">Aerial drone footage, a cinematic video walk-through, professional photography and a staging consultation, with marketing in English and Cantonese, launched together so every qualified buyer sees your home at its best.</span><span class="proof">Drone · Film · Staging · Bilingual reach</span></span></span>
+      </button>
+      <button class="panel" aria-expanded="false">
+        <span class="plus" aria-hidden="true">+</span>
+        <span class="in"><span class="num">03</span><span><h3 data-i="pa3">Negotiation</h3><span class="body" data-i="pa3b" style="display:block">A Certified Negotiation Expert stays at the table from first offer to closing. The result: 81% of listings sold over asking, averaging 108.9% of list.</span><span class="proof">CNE certified · 108.9% average sale-to-list</span></span></span>
+      </button>
     </div>
   </div>
 </section>
 
-<!-- LEDGER -->
-<section class="ledger" id="results">
-  <div class="wrap">
-    <div class="ledger-head">
-      <div>
-        <h2 data-i="rh">Sold, and sold <em>well.</em></h2>
-        <p class="lead" data-i="rp">Every sale shows what the home was listed at and what it sold for. Ask Kenneth about any of them.</p>
+<!-- CASE STUDY -->
+<section class="sec" id="case">
+  <div class="wrap case-grid">
+    <a class="vid rv" href="#film" aria-label="Watch the 19 Duke of Cornwall listing film">
+      <img src="https://i.ytimg.com/vi/xNPaFZOCZbA/maxresdefault.jpg" alt="19 Duke of Cornwall Dr, Victoria Square, Markham" referrerpolicy="no-referrer" onerror="this.style.display='none'">
+      <span class="play"><span><svg viewBox="0 0 24 24" fill="#1A1714"><path d="M6 4l14 8-14 8z"/></svg></span></span>
+      <span class="cap" data-i="watch">Watch the listing film</span>
+    </a>
+    <div class="rv d1">
+      <h2 data-i="fh">A $1.89M listing that sold for <em>$2.12M.</em></h2>
+      <div class="tabs" role="tablist" aria-label="Case study">
+        <button role="tab" id="t1" aria-selected="true" aria-controls="p1" data-i="ct1">The home</button>
+        <button role="tab" id="t2" aria-selected="false" aria-controls="p2" data-i="ct2">The marketing</button>
+        <button role="tab" id="t3" aria-selected="false" aria-controls="p3" data-i="ct3">The result</button>
       </div>
+      <div class="tabpanel" id="p1" role="tabpanel" aria-labelledby="t1">
+        <ul><li>5 bedrooms, 5 bathrooms in Victoria Square, Markham</li><li>Over $300,000 in premium upgrades</li><li>Gaggenau kitchen and smart home automation</li><li>Listed at $1,888,000</li></ul>
+      </div>
+      <div class="tabpanel" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+        <ul><li>Professional staging consultation</li><li>Cinematic listing film and photography</li><li>Targeted marketing in English and Cantonese</li><li>Launch coordinated so buyers compete, not wait</li></ul>
+      </div>
+      <div class="tabpanel" id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+        <div class="bars" id="bars">
+          <div class="bar"><span>Listed</span><div class="track"><div class="fill" data-w="89"></div></div><b>$1,888,000</b></div>
+          <div class="bar"><span>Sold</span><div class="track"><div class="fill" data-w="100"><div class="x" style="width:11%"></div></div></div><b>$2,122,888</b></div>
+        </div>
+        <div class="pctbig">+12.4%<small>over asking · April 2025</small></div>
+      </div>
+      <p style="margin-top:28px"><a class="btn solid" href="#strategy" data-i="fcta">Plan my sale like this</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS EXPLORER -->
+<section class="sec ledger" id="results">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 data-i="rh">Every result, <em>on the record.</em></h2>
+      <p class="lead" data-i="rp">Filter, search and sort. Each sale shows the list price, the sold price and the premium Kenneth’s clients earned.</p>
+    </div>
+    <div class="tools">
       <div class="filters" role="group" aria-label="Filter sales">
         <button type="button" data-f="all" aria-pressed="true">All</button>
         <button type="button" data-f="sold" aria-pressed="false" data-i="fSold">Listed &amp; sold</button>
         <button type="button" data-f="bought" aria-pressed="false" data-i="fBought">Bought for clients</button>
       </div>
+      <span class="sp"></span>
+      <input type="search" id="q" placeholder="Search a street or area" aria-label="Search sales">
+      <select id="sort" aria-label="Sort sales">
+        <option value="new">Most recent</option>
+        <option value="dollar">Biggest premium ($)</option>
+        <option value="pct">Highest % over list</option>
+        <option value="price">Price, high to low</option>
+      </select>
     </div>
     <table class="table">
       <thead><tr><th>Address</th><th>Type</th><th>Price</th><th>Result</th><th>Date</th></tr></thead>
       <tbody id="rows"></tbody>
     </table>
-    <div class="more">
-      <a class="btn ghost" href="https://kennethsek.com/results.html" target="_blank" rel="noopener" data-i="allSales">See all 53 sales</a>
-    </div>
-    <p class="note">Sale-to-list figures are based on the 16 listings with both a list and a sold price. Totals include all 53 homes, 2022 to 2026. Past results do not guarantee future results.</p>
+    <p class="note">Showing a selection of recent sales. Sale-to-list figures are based on the 16 listings with both a list and a sold price. Totals include all 53 homes, 2022 to 2026. <a href="https://kennethsek.com/results.html" target="_blank" rel="noopener">See all sales</a>. Past results do not guarantee future results.</p>
   </div>
 </section>
 
-<!-- LUXURY -->
-<section class="lux" id="luxury">
-  <div class="wrap lux-grid">
-    <div class="gallery">
-      <figure><img src="https://kennethsek.com/listing_living.webp" alt="Luxury living room with stone fireplace" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentNode.classList.add('imgfail');this.style.display='none'"><figcaption>Living</figcaption></figure>
-      <figure><img src="https://kennethsek.com/listing_dining.webp" alt="Formal dining room with crystal chandelier" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentNode.classList.add('imgfail');this.style.display='none'"><figcaption>Dining</figcaption></figure>
-      <figure><img src="https://kennethsek.com/listing_piano.webp" alt="Music room with grand piano" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentNode.classList.add('imgfail');this.style.display='none'"><figcaption>Music room</figcaption></figure>
+<!-- STRATEGY BUILDER -->
+<section class="sec strat dk" id="strategy">
+  <div class="wrap strat-grid">
+    <div class="rv">
+      <span class="eyebrow" data-i="stE">Private seller strategy</span>
+      <h2 style="margin-top:14px" data-i="stH">Three questions. <em>Your plan.</em></h2>
+      <p class="lead" style="margin-top:18px" data-i="stP">Tell Kenneth about your home and goals. See how he would position it, prepare it and bring it to market, then send the plan straight to him.</p>
     </div>
-    <div>
-      <h2 data-i="lh">Your home deserves <em>world-class</em> marketing.</h2>
-      <p class="lead" style="color:#B8C5DA;margin-top:18px" data-i="lp">Kenneth holds the CLHMS Elite Guild designation, a commitment to a higher standard of presentation, marketing and negotiation.</p>
-      <dl>
-        <dt data-i="l1t">Drone and cinematic video</dt>
-        <dd data-i="l1d">Aerial imagery shows scale, lot and neighbourhood. A sequenced video tour reaches remote and international buyers.</dd>
-        <dt data-i="l2t">Staging consultation</dt>
-        <dd data-i="l2d">Included on every listing. Staging helps buyers commit emotionally, at full price.</dd>
-        <dt data-i="l3t">Marketing in English and Cantonese</dt>
-        <dd data-i="l3d">Your home is in front of the full Markham and York Region buyer pool from day one.</dd>
-        <dt data-i="l4t">Problems solved before they appear</dt>
-        <dd data-i="l4d">A builder and developer network built over a decade means issues are caught early, not at conditions.</dd>
-      </dl>
-      <div class="cta">
-        <a class="btn white" href="#contact" data-i="lcta">Book a listing consultation</a>
-        <a class="btn light" href="https://calendly.com/kshomes/30min" target="_blank" rel="noopener" data-i="lcta2">Book a 30-min call</a>
-      </div>
-    </div>
+    <div class="sbox rv d1" id="sbox" aria-live="polite"></div>
   </div>
 </section>
 
-<!-- BILINGUAL -->
-<section class="bi">
-  <div class="wrap bi-grid">
-    <div>
-      <h2 data-i="bh">Reach every <em>qualified</em> buyer.</h2>
-      <p class="zh">99萬買下雙車房獨立屋，萬錦最旺地段</p>
-      <p class="lead" data-i="bp">Many buyers in York Region research and decide in Cantonese. Kenneth markets in both languages, so your listing is not seen by half the market.</p>
-    </div>
-    <div class="video">
-      <iframe src="https://www.youtube.com/embed/dt8Nt87NwBw?start=66&rel=0&modestbranding=1" title="Markham detached home coverage in Cantonese" loading="lazy" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- CINEMATIC -->
-<section class="film" id="film">
+<!-- FILM -->
+<section class="sec film dk" id="film">
   <div class="wrap">
-    <h2 data-i="fih">Every home gets the <em>film</em> it deserves.</h2>
-    <p class="lead" data-i="fip">Aerial drone footage, cinematic video walk-throughs and professional photography, flown and shot for every listing Kenneth represents. Buyers see the lot, the setting and the story before they ever book a showing.</p>
-    <div class="player">
-      <iframe src="https://www.youtube.com/embed/xNPaFZOCZbA?rel=0&modestbranding=1&color=white" title="19 Duke of Cornwall Dr, Markham listing film" loading="lazy" allowfullscreen></iframe>
+    <h2 class="rv" data-i="fih">Every home gets the <em>film</em> it deserves.</h2>
+    <p class="lead rv d1" data-i="fip">Aerial drone footage, cinematic video walk-throughs and professional photography, flown and shot for every listing Kenneth represents. Buyers see the lot, the setting and the story before they ever book a showing.</p>
+    <div class="ftabs" role="tablist" aria-label="Films">
+      <button role="tab" aria-selected="true" data-v="xNPaFZOCZbA" data-s="0">Listing film</button>
+      <button role="tab" aria-selected="false" data-v="dt8Nt87NwBw" data-s="66">Cantonese feature</button>
     </div>
+    <div class="player"><iframe id="vf" src="https://www.youtube.com/embed/xNPaFZOCZbA?rel=0&modestbranding=1&color=white" title="Kenneth Sek listing film" loading="lazy" allowfullscreen></iframe></div>
     <div class="meta">
       <div><b>Drone</b><span data-i="fm1">Aerial photography and video</span></div>
       <div><b data-i="fm2t">Walk-through</b><span data-i="fm2">Cinematic video tour</span></div>
       <div><b>19 Duke of Cornwall</b><span data-i="fm3">Sold $234,888 over asking</span></div>
     </div>
     <div class="cta">
-      <a class="btn white" href="#contact" data-i="fcta2">Request a film for my home</a>
-      <a class="btn light" href="https://www.youtube.com/@kennethsek" target="_blank" rel="noopener" data-i="fcta3">More films on YouTube</a>
+      <a class="btn gold" href="#contact" data-i="fcta2">Request a film for my home</a>
+      <a class="btn line" href="https://www.youtube.com/@kennethsek" target="_blank" rel="noopener" data-i="fcta3">More films on YouTube</a>
     </div>
   </div>
 </section>
 
+<!-- LUXURY -->
+<section class="sec lux" id="luxury">
+  <div class="wrap lux-grid">
+    <div class="gallery rv" id="gal">
+      <button data-src="https://kennethsek.com/listing_living.webp" data-cap="Living room" aria-label="Enlarge living room photo"><img src="https://kennethsek.com/listing_living.webp" alt="Luxury living room with stone fireplace" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'"><span>Living</span></button>
+      <button data-src="https://kennethsek.com/listing_dining.webp" data-cap="Dining room" aria-label="Enlarge dining room photo"><img src="https://kennethsek.com/listing_dining.webp" alt="Formal dining room with crystal chandelier" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'"><span>Dining</span></button>
+      <button data-src="https://kennethsek.com/listing_piano.webp" data-cap="Music room" aria-label="Enlarge music room photo"><img src="https://kennethsek.com/listing_piano.webp" alt="Music room with grand piano" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'"><span>Music room</span></button>
+    </div>
+    <div class="rv d1">
+      <h2 data-i="lh">Marketing worthy of <em>your home.</em></h2>
+      <p class="lead" style="margin-top:18px" data-i="lp">Kenneth holds the CLHMS Elite Guild designation, a commitment to a higher standard of presentation, marketing and negotiation for luxury homes.</p>
+      <dl>
+        <dt data-i="l1t">Drone and cinematic video</dt>
+        <dd data-i="l1d">Aerial imagery shows scale, lot and neighbourhood. A sequenced video tour reaches remote and international buyers.</dd>
+        <dt data-i="l2t">Staging consultation</dt>
+        <dd data-i="l2d">Included on every listing. Staging helps buyers commit emotionally, at full price.</dd>
+        <dt data-i="l4t">Problems solved before they appear</dt>
+        <dd data-i="l4d">A builder and developer network built over a decade means issues are caught early, not at conditions.</dd>
+      </dl>
+      <div class="cta">
+        <a class="btn solid" href="#contact" data-i="lcta">Book a listing consultation</a>
+        <a class="btn ghost" href="https://calendly.com/kshomes/30min" target="_blank" rel="noopener" data-i="lcta2">Book a 30-min call</a>
+      </div>
+    </div>
+  </div>
+</section>
+<dialog id="lb" aria-label="Photo viewer"><button class="x" type="button" id="lbx">Close ✕</button><img alt="" id="lbi"><p id="lbc"></p></dialog>
+
+<!-- BILINGUAL BAND -->
+<section class="band">
+  <div class="wrap">
+    <div>
+      <h2 class="rv" data-i="bh">Reach every <em>qualified</em> buyer.</h2>
+      <p data-i="bp">Many buyers in York Region research and decide in Cantonese. Kenneth markets in both languages, so your listing is not seen by half the market.</p>
+    </div>
+    <p class="zh rv d1">99萬買下雙車房獨立屋，萬錦最旺地段</p>
+  </div>
+</section>
+
 <!-- STORY -->
-<section class="story" id="story">
+<section class="sec story" id="story">
   <div class="wrap">
     <div class="story-grid">
-      <div class="pic"><img src="https://kennethsek.com/headshot_about.webp" alt="Kenneth Sek" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'"></div>
-      <div>
+      <div class="pic rv"><img src="https://kennethsek.com/headshot_about.webp" alt="Kenneth Sek" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="rv d1">
         <h2 data-i="sth">Prepared before the <em>first showing.</em></h2>
         <p data-i="st1">Before listing a home, Kenneth spent years embedded with builders and developers across the GTA, learning how properties are priced, positioned and sold. The difference between a home that sells at full value and one that leaves money on the table is rarely luck. It is preparation, marketing, and an agent who refuses a mediocre outcome.</p>
         <p data-i="st2">He is a triathlete who trains at 5am, plans every detail, and does not stop until he crosses the finish line. Originally from Hong Kong, he works in English and Cantonese.</p>
@@ -475,15 +604,15 @@ footer .legal{border-top:1px solid #1F3A63;padding-top:22px;font-size:.82rem;lin
       </div>
     </div>
     <div class="awards">
-      <div class="award"><div class="im"><img src="https://kennethsek.com/award_realtron_cropped.webp" alt="Kenneth Sek receiving the RE/MAX Realtron Top Agent Award" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'"></div><p><b>RE/MAX Realtron Top Agent</b>Annual recognition event</p></div>
-      <div class="award"><div class="im"><img src="https://kennethsek.com/award_r4_cropped.webp" alt="Kenneth Sek at the RE/MAX R4 Convention 2025 in Las Vegas" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'"></div><p><b>RE/MAX R4 Convention 2025</b>Las Vegas, two awards received</p></div>
-      <div class="award"><div class="im"><img src="https://kennethsek.com/award_stage_cropped.webp" alt="Kenneth Sek receiving a championship award on stage" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'"></div><p><b>RE/MAX Championship Award</b>International stage recognition</p></div>
+      <div class="award rv"><div class="im"><img src="https://kennethsek.com/award_realtron_cropped.webp" alt="Kenneth Sek receiving the RE/MAX Realtron Top Agent Award" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'"></div><p><b>RE/MAX Realtron Top Agent</b>Annual recognition event</p></div>
+      <div class="award rv d1"><div class="im"><img src="https://kennethsek.com/award_r4_cropped.webp" alt="Kenneth Sek at the RE/MAX R4 Convention 2025 in Las Vegas" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'"></div><p><b>RE/MAX R4 Convention 2025</b>Las Vegas, two awards received</p></div>
+      <div class="award rv d2"><div class="im"><img src="https://kennethsek.com/award_stage_cropped.webp" alt="Kenneth Sek receiving a championship award on stage" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'"></div><p><b>RE/MAX Championship Award</b>International stage recognition</p></div>
     </div>
   </div>
 </section>
 
 <!-- REVIEWS -->
-<section class="reviews" id="reviews">
+<section class="sec reviews" id="reviews">
   <div class="wrap">
     <div class="rev-head">
       <div>
@@ -491,7 +620,7 @@ footer .legal{border-top:1px solid #1F3A63;padding-top:22px;font-size:.82rem;lin
       </div>
       <div class="score">4.9<small>Google · 32 reviews<br>5.0 on RankMyAgent (2025)</small></div>
     </div>
-    <div class="rgrid">
+    <div class="car" id="car" tabindex="0" aria-label="Client reviews, scroll horizontally">
       <div class="rev"><div class="st">★★★★★</div><p>Kenneth made the process smooth and easy. He sold our house above asking in less than a week, then helped us find our second home in record speed.</p><b>Marina I.</b> <span>· Sold &amp; bought</span></div>
       <div class="rev"><div class="st">★★★★★</div><p>Sold quickly, in just 8 days, for the price we were hoping for, exactly within the timeline he anticipated.</p><b>Mack L.</b> <span>· Bought &amp; sold in Markham</span></div>
       <div class="rev"><div class="st">★★★★★</div><p>Ken helped me sell my condo and got the highest price in the building.</p><b>Brandon S.</b> <span>· Sold</span></div>
@@ -499,31 +628,21 @@ footer .legal{border-top:1px solid #1F3A63;padding-top:22px;font-size:.82rem;lin
       <div class="rev"><div class="st">★★★★★</div><p>He calms the process down and genuinely looks out for what is best for you.</p><b>Jessie L.</b> <span>· Sold in Markham</span></div>
       <div class="rev"><div class="st">★★★★★</div><p>He connected us with a lawyer, mortgage broker and contractors, which made everything much smoother.</p><b>Marc C.</b> <span>· Bought in Markham</span></div>
     </div>
-    <p class="note"><a href="https://www.google.com/maps/place/Kenneth+Sek+%7C+RE%2FMAX+Realtron/data=!4m2!3m1!1s0x8154cb3b826636d1:0x51de2c4f9df4276?hl=en" target="_blank" rel="noopener">Read all reviews on Google</a> · Reviews are condensed from Google and RankMyAgent.</p>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="steps">
-  <div class="wrap">
-    <h2 data-i="ph">How Kenneth sells <em>your home.</em></h2>
-    <ol class="step-list">
-      <li><b data-i="p1t">Value it</b><p data-i="p1d">A real pricing analysis from a broker who knows your street, within 24 hours.</p></li>
-      <li><b data-i="p2t">Prepare it</b><p data-i="p2d">Staging consultation, fixes that pay back, and a plan before photos are taken.</p></li>
-      <li><b data-i="p3t">Market it</b><p data-i="p3d">Photography, drone, video and bilingual reach, launched together.</p></li>
-      <li><b data-i="p4t">Negotiate it</b><p data-i="p4d">A Certified Negotiation Expert at the table through conditions and closing.</p></li>
-    </ol>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:12px">
+      <p class="note" style="margin:0"><a href="https://www.google.com/maps/place/Kenneth+Sek+%7C+RE%2FMAX+Realtron/data=!4m2!3m1!1s0x8154cb3b826636d1:0x51de2c4f9df4276?hl=en" target="_blank" rel="noopener">Read all reviews on Google</a> · Condensed from Google and RankMyAgent.</p>
+      <div class="arrows"><button type="button" id="prev" aria-label="Previous reviews">←</button><button type="button" id="next" aria-label="Next reviews">→</button></div>
+    </div>
   </div>
 </section>
 
 <!-- ESTIMATOR -->
-<section class="est">
+<section class="sec est dk">
   <div class="wrap est-grid">
-    <div>
+    <div class="rv">
       <h2 data-i="eh">What could 108.9% <em>look like?</em></h2>
-      <p class="lead" style="color:#B8C5DA;margin-top:16px" data-i="ep">Slide to your expected list price to see Kenneth’s average sale-to-list result applied to it.</p>
+      <p class="lead" style="margin-top:16px" data-i="ep">Slide to your expected list price to see Kenneth’s average sale-to-list result applied to it.</p>
     </div>
-    <div>
+    <div class="rv d1">
       <label for="lp"><span data-i="elab">List price</span>: <span id="lpv">$1,500,000</span></label>
       <input id="lp" type="range" min="500000" max="4000000" step="25000" value="1500000">
       <div class="out">
@@ -536,16 +655,16 @@ footer .legal{border-top:1px solid #1F3A63;padding-top:22px;font-size:.82rem;lin
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<section class="sec contact" id="contact">
   <div class="wrap contact-grid">
-    <div class="info">
-      <h2 data-i="ch">Ready to get <em>more</em> for your home?</h2>
-      <p class="lead" style="margin-top:18px" data-i="cp">Start with a conversation about your goals and timeline. Kenneth replies personally within 24 hours.</p>
+    <div class="info rv">
+      <h2 data-i="ch">Begin with a private <em>conversation.</em></h2>
+      <p class="lead" style="margin-top:18px" data-i="cp">Tell Kenneth about your home and your timeline. He replies personally within 24 hours.</p>
       <p><small>Phone / text</small><a href="tel:+14168290081">(416) 829-0081</a></p>
       <p><small>Email</small><a href="mailto:ken@kennethsek.com">ken@kennethsek.com</a></p>
       <p><small>Office</small>7800 Woodbine Ave, PH1, Markham, ON L3R 2N7</p>
     </div>
-    <form id="lead" novalidate>
+    <form id="lead" class="rv d1" novalidate>
       <div><label for="fn">First name</label><input id="fn" name="first" autocomplete="given-name" required></div>
       <div><label for="ln">Last name</label><input id="ln" name="last" autocomplete="family-name"></div>
       <div><label for="em">Email</label><input id="em" name="email" type="email" autocomplete="email" required></div>
@@ -565,10 +684,10 @@ footer .legal{border-top:1px solid #1F3A63;padding-top:22px;font-size:.82rem;lin
 </section>
 
 <!-- AREAS -->
-<section class="areas" id="areas">
+<section class="sec" id="areas" style="padding-top:0">
   <div class="wrap">
-    <h2 data-i="ah">Markham <em>neighbourhoods.</em></h2>
-    <div class="chips">
+    <h2 class="rv" data-i="ah">Markham <em>neighbourhoods.</em></h2>
+    <div class="chips rv">
       <a href="https://kennethsek.com/unionville.html" target="_blank" rel="noopener">Unionville</a>
       <a href="https://kennethsek.com/cornell.html" target="_blank" rel="noopener">Cornell</a>
       <a href="https://kennethsek.com/berczy.html" target="_blank" rel="noopener">Berczy Village</a>
@@ -602,123 +721,239 @@ footer .legal{border-top:1px solid #1F3A63;padding-top:22px;font-size:.82rem;lin
   </div>
 </footer>
 
-<script>
-/* ---------- results data (from kennethsek.com/results) ---------- */
-const SALES=[
- {a:"19 Duke of Cornwall Dr",l:"Victoria Square, Markham · 5 bed · 5 bath",t:"Listed & sold",k:"sold",p:2122888,r:"+$234,888 over",o:1,d:"Apr 2025"},
- {a:"46 Juniper Cres",l:"Unionville, Markham · Link detached",t:"Listed & sold",k:"sold",p:1281000,r:"+$82,000 over",o:1,d:"May 2026"},
- {a:"5 Armando Dr",l:"Wismer, Markham · Detached",t:"Listed & sold",k:"sold",p:1661000,r:"+$381,000 over",o:1,d:"Jun 2024"},
- {a:"1 Ruskov Lane",l:"Cathedraltown, Markham · Townhouse",t:"Listed & sold",k:"sold",p:1106000,r:"+$107,000 over",o:1,d:"Jun 2025"},
- {a:"12 Gandhi Lane",l:"Commerce Valley, Markham · Condo",t:"Listed & sold",k:"sold",p:828000,r:"+$129,000 over",o:1,d:"Nov 2024"},
- {a:"4 Manning Cres",l:"Newmarket · Detached",t:"Listed & sold",k:"sold",p:1230000,r:"+$82,000 over",o:1,d:"Aug 2024"},
- {a:"331 Chartland Blvd S",l:"Agincourt North, Toronto · Semi-detached",t:"Listed & sold",k:"sold",p:1068000,r:"+$169,000 over",o:1,d:"Aug 2023"},
- {a:"6067 Gemini Cres",l:"Lisgar, Mississauga · Detached",t:"Listed & sold",k:"sold",p:1150000,r:"+$151,000 over",o:1,d:"Jul 2023"},
- {a:"555 Wilson Ave",l:"Clanton Park, Toronto · Condo townhouse",t:"Listed & sold",k:"sold",p:620000,r:"+$71,000 over",o:1,d:"Jan 2024"},
- {a:"30 Ecclesfield Dr",l:"Steeles, Toronto · Link detached",t:"Listed & sold",k:"sold",p:1055000,r:"+$56,000 over",o:1,d:"Apr 2025"},
- {a:"100 Burrows Hall Blvd",l:"Malvern, Toronto · Condo townhouse",t:"Listed & sold",k:"sold",p:572000,r:"+$23,000 over",o:1,d:"Aug 2026"},
- {a:"15 Evansville Rd",l:"Agincourt North, Toronto · Townhouse",t:"Listed & sold",k:"sold",p:825000,r:"+$37,000 over",o:1,d:"Aug 2024"},
- {a:"28 Invergordon Ave",l:"Agincourt South, Toronto · Semi-detached",t:"Listed & sold",k:"sold",p:913000,r:"+$14,000 over",o:1,d:"Sep 2025"},
- {a:"206 Carlton Rd",l:"Markham",t:"Listed & sold",k:"sold",p:1820000,r:"",o:0,d:"Oct 2025"},
- {a:"351A Greenfield Ave",l:"Willowdale East, Toronto · Detached",t:"Bought for client",k:"bought",p:2960100,r:"",o:0,d:"Jul 2025"},
- {a:"12 Chaplin Crt",l:"Bayview Hill, Richmond Hill · Detached",t:"Bought for client",k:"bought",p:2590000,r:"$190,000 under",o:0,d:"May 2025"},
- {a:"109 Busch Ave",l:"Berczy, Markham · Detached",t:"Bought for client",k:"bought",p:2235000,r:"18 days on market",o:0,d:"Jun 2024"},
- {a:"31 Eyer Dr",l:"Cachet, Markham · Detached",t:"Bought for client",k:"bought",p:1975000,r:"$24,900 under",o:0,d:"Mar 2026"},
- {a:"105 Doris Ave",l:"Willowdale East, Toronto · Townhouse",t:"Bought for client",k:"bought",p:1435000,r:"$45,000 under",o:0,d:"Jun 2026"},
- {a:"386 Yonge St",l:"Bay Street Corridor, Toronto · Condo",t:"Bought for client",k:"bought",p:775000,r:"$23,000 under",o:0,d:"Jul 2026"}
-];
-const fmt=n=>"$"+n.toLocaleString("en-CA");
-const rows=document.getElementById("rows");
-function drawRows(f){
-  rows.innerHTML=SALES.filter(s=>f==="all"||s.k===f).map(s=>`
-   <tr><td class="addr">${s.a}<small>${s.l}</small></td>
-   <td><span class="pill">${s.t}</span></td>
-   <td class="price">${fmt(s.p)}</td>
-   <td>${s.r?`<span class="${s.o?'over-t':'under-t'}">${s.r}</span>`:""}</td>
-   <td class="under-t">${s.d}</td></tr>`).join("");
-}
-drawRows("all");
-document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{
-  document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));
-  drawRows(b.dataset.f);
-}));
+<div id="fab" aria-label="Contact Kenneth">
+  <a class="btn gold" href="#contact" data-i="fab">Private consultation</a>
+  <a class="btn call" href="tel:+14168290081" aria-label="Call Kenneth">☎</a>
+</div>
 
-/* ---------- hero tape: one orchestrated count-up ---------- */
+<script>
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const fmt=n=>"$"+Math.round(n).toLocaleString("en-CA");
+const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+/* ---------- scroll progress, hero parallax, floating CTA ---------- */
+const prog=$("#prog"),bg=$("#heroBg"),fab=$("#fab");
+let contactIn=false;
+function onScroll(){
+  const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+  prog.style.width=(h>0?y/h*100:0)+"%";
+  if(!RM&&y<innerHeight*1.2)bg.style.transform=`translateY(${y*.18}px)`;
+  fab.classList.toggle("show",y>innerHeight*.7&&!contactIn);
+}
+addEventListener("scroll",onScroll,{passive:true});onScroll();
+new IntersectionObserver(e=>{contactIn=e[0].isIntersecting;onScroll()}).observe($("#contact"));
+
+/* ---------- reveal on scroll ---------- */
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+$$(".rv").forEach(n=>io.observe(n));
+
+/* ---------- count-up stats ---------- */
+function countUp(el){
+  const to=+el.dataset.count,dec=+(el.dataset.dec||0),pre=el.dataset.pre||"",suf=el.dataset.suf||"";
+  if(RM){return}
+  const t0=performance.now(),dur=1600;
+  (function tick(t){const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);
+    el.textContent=pre+(to*e).toFixed(dec)+suf;if(p<1)requestAnimationFrame(tick)})(t0);
+}
+const sio=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){countUp(e.target);sio.unobserve(e.target)}}),{threshold:.6});
+$$("[data-count]").forEach(n=>sio.observe(n));
+
+/* ---------- hero price count-up ---------- */
 (function(){
-  const was=1888000,now=2122888,el=document.getElementById("tNow"),dl=document.getElementById("tDelta");
-  if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
-  const t0=performance.now()+700,dur=1800;
-  el.textContent=fmt(was);dl.style.visibility="hidden";
-  function tick(t){
-    const p=Math.min(Math.max((t-t0)/dur,0),1),e=1-Math.pow(1-p,3);
-    el.textContent=fmt(Math.round(was+(now-was)*e));
-    if(p<1)requestAnimationFrame(tick);else dl.style.visibility="visible";
-  }
-  requestAnimationFrame(tick);
+  const el=$("#tNow");if(RM)return;
+  const a=1888000,b=2122888,t0=performance.now()+600,dur=2000;
+  el.textContent=fmt(a);
+  (function tick(t){const p=Math.min(Math.max((t-t0)/dur,0),1),e=1-Math.pow(1-p,3);
+    el.textContent=fmt(a+(b-a)*e);if(p<1)requestAnimationFrame(tick)})(performance.now());
 })();
 
-/* ---------- featured bars animate when seen ---------- */
-const bars=document.getElementById("bars");
-new IntersectionObserver((es,ob)=>es.forEach(e=>{if(e.isIntersecting){bars.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.w+"%");ob.disconnect()}}),{threshold:.4}).observe(bars);
+/* ---------- marquee ---------- */
+(function(){
+  const items=["Top 0.5% of TRREB agents","108.9% average sale-to-list","RE/MAX Top 100 in Ontario","81% of listings sold over asking","CLHMS Elite Guild","$63M sold and bought since 2022","Certified Negotiation Expert","RankMyAgent Best of Markham 2025","RE/MAX R4 Convention 2025","English and Cantonese"];
+  const html=items.map(t=>`<span>${t}</span>`).join("");
+  $("#mq").innerHTML=html+html.replace(/<span>/g,'<span aria-hidden="true">');
+})();
+
+/* ---------- standard accordion ---------- */
+$$("#panels .panel").forEach(p=>p.addEventListener("click",()=>{
+  $$("#panels .panel").forEach(x=>{x.classList.toggle("open",x===p);x.setAttribute("aria-expanded",x===p)});
+}));
+
+/* ---------- case study tabs ---------- */
+const tabs=$$(".tabs [role=tab]");
+function openTab(t){
+  tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);$("#"+x.getAttribute("aria-controls")).hidden=!on});
+  if(t.id==="t3")setTimeout(()=>$$("#bars .fill").forEach(f=>f.style.width=f.dataset.w+"%"),60);
+  else $$("#bars .fill").forEach(f=>f.style.width="0");
+}
+tabs.forEach((t,i)=>{
+  t.addEventListener("click",()=>openTab(t));
+  t.addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const n=tabs[(i+(e.key==="ArrowRight"?1:tabs.length-1))%tabs.length];n.focus();openTab(n)}});
+});
+
+/* ---------- results explorer (data from kennethsek.com/results) ---------- */
+const SALES=[
+ {a:"19 Duke of Cornwall Dr",l:"Victoria Square, Markham · 5 bed · 5 bath",t:"Listed & sold",k:"sold",p:2122888,r:"+$234,888 over",d:"Apr 2025"},
+ {a:"46 Juniper Cres",l:"Unionville, Markham · Link detached",t:"Listed & sold",k:"sold",p:1281000,r:"+$82,000 over",d:"May 2026"},
+ {a:"5 Armando Dr",l:"Wismer, Markham · Detached",t:"Listed & sold",k:"sold",p:1661000,r:"+$381,000 over",d:"Jun 2024"},
+ {a:"1 Ruskov Lane",l:"Cathedraltown, Markham · Townhouse",t:"Listed & sold",k:"sold",p:1106000,r:"+$107,000 over",d:"Jun 2025"},
+ {a:"12 Gandhi Lane",l:"Commerce Valley, Markham · Condo",t:"Listed & sold",k:"sold",p:828000,r:"+$129,000 over",d:"Nov 2024"},
+ {a:"4 Manning Cres",l:"Newmarket · Detached",t:"Listed & sold",k:"sold",p:1230000,r:"+$82,000 over",d:"Aug 2024"},
+ {a:"331 Chartland Blvd S",l:"Agincourt North, Toronto · Semi-detached",t:"Listed & sold",k:"sold",p:1068000,r:"+$169,000 over",d:"Aug 2023"},
+ {a:"6067 Gemini Cres",l:"Lisgar, Mississauga · Detached",t:"Listed & sold",k:"sold",p:1150000,r:"+$151,000 over",d:"Jul 2023"},
+ {a:"555 Wilson Ave",l:"Clanton Park, Toronto · Condo townhouse",t:"Listed & sold",k:"sold",p:620000,r:"+$71,000 over",d:"Jan 2024"},
+ {a:"30 Ecclesfield Dr",l:"Steeles, Toronto · Link detached",t:"Listed & sold",k:"sold",p:1055000,r:"+$56,000 over",d:"Apr 2025"},
+ {a:"100 Burrows Hall Blvd",l:"Malvern, Toronto · Condo townhouse",t:"Listed & sold",k:"sold",p:572000,r:"+$23,000 over",d:"Aug 2026"},
+ {a:"15 Evansville Rd",l:"Agincourt North, Toronto · Townhouse",t:"Listed & sold",k:"sold",p:825000,r:"+$37,000 over",d:"Aug 2024"},
+ {a:"28 Invergordon Ave",l:"Agincourt South, Toronto · Semi-detached",t:"Listed & sold",k:"sold",p:913000,r:"+$14,000 over",d:"Sep 2025"},
+ {a:"206 Carlton Rd",l:"Markham",t:"Listed & sold",k:"sold",p:1820000,r:"",d:"Oct 2025"},
+ {a:"351A Greenfield Ave",l:"Willowdale East, Toronto · Detached",t:"Bought for client",k:"bought",p:2960100,r:"",d:"Jul 2025"},
+ {a:"12 Chaplin Crt",l:"Bayview Hill, Richmond Hill · Detached",t:"Bought for client",k:"bought",p:2590000,r:"$190,000 under",d:"May 2025"},
+ {a:"109 Busch Ave",l:"Berczy, Markham · Detached",t:"Bought for client",k:"bought",p:2235000,r:"18 days on market",d:"Jun 2024"},
+ {a:"31 Eyer Dr",l:"Cachet, Markham · Detached",t:"Bought for client",k:"bought",p:1975000,r:"$24,900 under",d:"Mar 2026"},
+ {a:"105 Doris Ave",l:"Willowdale East, Toronto · Townhouse",t:"Bought for client",k:"bought",p:1435000,r:"$45,000 under",d:"Jun 2026"},
+ {a:"386 Yonge St",l:"Bay Street Corridor, Toronto · Condo",t:"Bought for client",k:"bought",p:775000,r:"$23,000 under",d:"Jul 2026"}
+];
+const MON={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+SALES.forEach(s=>{
+  const [m,y]=s.d.split(" ");s.ts=new Date(+y,MON[m],1).getTime();
+  const o=s.r.match(/^\+\$([\d,]+) over/);s.over=o?+o[1].replace(/,/g,""):0;
+  s.pct=s.over?(s.p/(s.p-s.over)-1)*100:0;
+});
+const st={f:"all",q:"",sort:"new"};
+function drawRows(){
+  let list=SALES.filter(s=>(st.f==="all"||s.k===st.f)&&(s.a+" "+s.l).toLowerCase().includes(st.q.toLowerCase()));
+  const by={new:(a,b)=>b.ts-a.ts,dollar:(a,b)=>b.over-a.over,pct:(a,b)=>b.pct-a.pct,price:(a,b)=>b.p-a.p}[st.sort];
+  list.sort(by);
+  $("#rows").innerHTML=list.length?list.map(s=>{
+    const res=s.over?`<span class="over-t">+${fmt(s.over)}</span><div class="mini" aria-hidden="true"><i style="width:${Math.min(s.pct/30*100,100)}%"></i></div><div class="pctl">${s.pct.toFixed(1)}% over list</div>`
+      :(s.r?`<span class="under-t">${s.r}</span>`:"");
+    return `<tr><td class="addr">${s.a}<small>${s.l}</small></td><td><span class="pill">${s.t}</span></td><td class="price">${fmt(s.p)}</td><td>${res}</td><td class="under-t">${s.d}</td></tr>`}).join("")
+    :`<tr><td class="empty" colspan="5">No matches. Try another street or area.</td></tr>`;
+}
+drawRows();
+$$(".filters button").forEach(b=>b.addEventListener("click",()=>{$$(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));st.f=b.dataset.f;drawRows()}));
+$("#q").addEventListener("input",e=>{st.q=e.target.value;drawRows()});
+$("#sort").addEventListener("change",e=>{st.sort=e.target.value;drawRows()});
+
+/* ---------- strategy builder ---------- */
+const Q=[
+ {k:"type",q:"What are you selling?",o:[["detached","Detached home"],["town","Semi or townhouse"],["condo","Condo"],["estate","Luxury estate"]]},
+ {k:"time",q:"When would you like to move?",o:[["asap","As soon as possible"],["mid","In 3 to 6 months"],["explore","Just exploring"]]},
+ {k:"goal",q:"What matters most to you?",o:[["price","Highest possible price"],["speed","A fast sale"],["quiet","A discreet process"],["next","Selling and buying"]]}
+];
+const PLAN={
+ type:{detached:"Lead with the lot, layout and neighbourhood. Aerial footage shows the setting before buyers ever book a showing.",
+       town:"Lead with turnkey living and value. The film and photography focus on flow, light and finishes.",
+       condo:"Lead with floor-plan clarity, amenities and building context, with pricing set against recent sales in your building.",
+       estate:"A cinematic, editorial presentation with drone and film at the centre, aimed at buyers who expect more."},
+ time:{asap:"A focused preparation window: staging consultation, essential fixes only, then a coordinated launch.",
+       mid:"Time to stage properly, complete the improvements that pay back, and launch when the market is strongest.",
+       explore:"A no-pressure valuation and written plan, so you can decide the moment the timing suits you."},
+ goal:{price:"A launch designed to create competition between buyers, with Kenneth negotiating from a position of strength.",
+       speed:"Sharp pricing and a coordinated launch that captures the first wave of buyers.",
+       quiet:"A controlled, low-key launch with tight communication and carefully managed showings.",
+       next:"Selling and buying as one plan: timing, conditions and your next home lined up together."}
+};
+const ans={};let step=0;
+const box=$("#sbox");
+function drawStrat(){
+  const dots=`<div class="dots" aria-hidden="true">${[0,1,2].map(i=>`<i class="${i<=Math.min(step,2)&&step<3||step===3?'on':''}"></i>`).join("")}</div>`;
+  if(step<3){
+    const q=Q[step];
+    box.innerHTML=dots+`<span class="stepno">Step ${step+1} of 3</span><h3>${q.q}</h3><div class="opts">${q.o.map(o=>`<button type="button" data-v="${o[0]}">${o[1]}</button>`).join("")}</div>`+(step?`<button type="button" class="back" id="sback">← Back</button>`:"");
+    $$(".opts button",box).forEach(b=>b.addEventListener("click",()=>{ans[q.k]=b.dataset.v;step++;drawStrat()}));
+    const bk=$("#sback");if(bk)bk.addEventListener("click",()=>{step--;drawStrat()});
+  }else{
+    const label=Q.map(q=>q.o.find(o=>o[0]===ans[q.k])[1]).join(" · ");
+    box.innerHTML=dots+`<span class="stepno">Your private strategy</span><h3>${label}</h3>
+    <ul class="plan"><li><b>Positioning</b><span>${PLAN.type[ans.type]}</span></li><li><b>Preparation</b><span>${PLAN.time[ans.time]}</span></li><li><b>Launch</b><span>${PLAN.goal[ans.goal]}</span></li></ul>
+    <div class="row"><button type="button" class="btn gold" id="ssend">Send this plan to Kenneth</button><button type="button" class="btn line" id="sredo">Start over</button></div>`;
+    $("#ssend").addEventListener("click",()=>{
+      $("#iw").value=ans.goal==="next"?"Sell my home":"Sell my home";
+      $("#msg").value="My private strategy: "+label+".";
+      $("#contact").scrollIntoView({behavior:RM?"auto":"smooth"});setTimeout(()=>$("#fn").focus({preventScroll:true}),700);
+    });
+    $("#sredo").addEventListener("click",()=>{step=0;drawStrat()});
+  }
+}
+drawStrat();
+
+/* ---------- film tabs ---------- */
+$$(".ftabs button").forEach(b=>b.addEventListener("click",()=>{
+  $$(".ftabs button").forEach(x=>x.setAttribute("aria-selected",x===b));
+  $("#vf").src=`https://www.youtube.com/embed/${b.dataset.v}?rel=0&modestbranding=1&color=white${+b.dataset.s?"&start="+b.dataset.s:""}`;
+}));
+
+/* ---------- lightbox ---------- */
+const lb=$("#lb");
+$$("#gal button").forEach(b=>b.addEventListener("click",()=>{$("#lbi").src=b.dataset.src;$("#lbi").alt=b.dataset.cap;$("#lbc").textContent=b.dataset.cap;lb.showModal()}));
+$("#lbx").addEventListener("click",()=>lb.close());
+lb.addEventListener("click",e=>{if(e.target===lb)lb.close()});
+
+/* ---------- reviews carousel ---------- */
+const car=$("#car");
+$("#next").addEventListener("click",()=>car.scrollBy({left:car.clientWidth*.8,behavior:"smooth"}));
+$("#prev").addEventListener("click",()=>car.scrollBy({left:-car.clientWidth*.8,behavior:"smooth"}));
 
 /* ---------- estimator ---------- */
-const lp=document.getElementById("lp");
+const lp=$("#lp");
 function est(){const v=+lp.value,a=Math.round(v*1.089/1000)*1000;
-  document.getElementById("lpv").textContent=fmt(v);
-  document.getElementById("avg").textContent=fmt(a);
-  document.getElementById("dif").textContent="+"+fmt(a-v);}
+  $("#lpv").textContent=fmt(v);$("#avg").textContent=fmt(a);$("#dif").textContent="+"+fmt(a-v)}
 lp.addEventListener("input",est);est();
 
 /* ---------- form: opens email draft (swap for your form service) ---------- */
-document.getElementById("lead").addEventListener("submit",e=>{
+$("#lead").addEventListener("submit",e=>{
   e.preventDefault();const f=e.target;
   if(f.website.value)return;
   if(!f.first.value||!f.email.value){alert("Please add your first name and email.");return}
   const body=`Name: ${f.first.value} ${f.last.value}\nEmail: ${f.email.value}\nPhone: ${f.phone.value}\nAddress: ${f.address.value}\nLooking to: ${f.intent.value}\n\n${f.message.value}`;
   location.href="mailto:ken@kennethsek.com?subject="+encodeURIComponent("Website inquiry: "+f.intent.value)+"&body="+encodeURIComponent(body);
-  document.getElementById("sent").style.display="block";
+  $("#sent").style.display="block";
 });
 
-/* ---------- EN / 中文 toggle ---------- */
+/* ---------- custom cursor ring (desktop only) ---------- */
+if(matchMedia("(pointer:fine)").matches&&!RM){
+  const c=$("#cur");let x=0,y=0,tx=0,ty=0;
+  addEventListener("mousemove",e=>{tx=e.clientX-19;ty=e.clientY-19;c.classList.add("on")});
+  addEventListener("mouseleave",()=>c.classList.remove("on"));
+  (function loop(){x+=(tx-x)*.18;y+=(ty-y)*.18;c.style.transform=`translate(${x}px,${y}px)`;requestAnimationFrame(loop)})();
+  document.addEventListener("mouseover",e=>c.classList.toggle("big",!!e.target.closest("a,button,input,select,.panel")));
+}
+
+/* ---------- EN / 中文 (key copy) ---------- */
 const ZH={
- n_results:"成交紀錄",n_luxury:"豪宅",n_about:"關於",n_reviews:"客戶評價",n_areas:"地區",n_cta:"免費評估",
- h1:"與 Kenneth 合作，萬錦好房<em>賣得更高</em>。",
- sub:"深耕大多區十多年，擁有建築商與發展商人脈，並以中英雙語推廣，接觸每一位合資格買家。第一次看房之前，一切已準備就緒。",
- cta1:"免費樓價評估",cta2:"查看所有成交",tag:"RE/MAX Realtron · 萬錦 Unionville",
- tapeLoc:"萬錦 Victoria Square",tapeLink:"了解詳情",
- s1:"Kenneth 放盤的平均成交價佔叫價比例",s2:"高於叫價成交的放盤比例",s3:"2022 年起買賣 53 間房屋",s4:"Google 評分，共 32 則評價",
- c1:"TRREB 頂尖 0.5% 經紀",c2:"RE/MAX 安省百大",
- fh:"叫價 $1.89M，成交 <em>$2.12M</em>。",watch:"觀看放盤影片",listed:"叫價",sold:"成交",
- f1:"Victoria Square 五房五浴，2025 年 4 月成交",f2:"逾 $300,000 高端升級，包括 Gaggenau 廚房及智能家居",f3:"專業佈置、精準推廣及雙語買家覆蓋",fcta:"為我的房屋制定方案",
- rh:"賣得出，而且<em>賣得好</em>。",rp:"每宗成交都列明叫價與成交價。歡迎向 Kenneth 查詢任何一宗。",fSold:"放盤成交",fBought:"代客買入",allSales:"查看全部 53 宗成交",
- lh:"您的房屋值得<em>世界級</em>推廣。",lp:"Kenneth 持有 CLHMS Elite Guild 認證，承諾以更高標準做好呈現、推廣及談判。",
- l1t:"航拍及電影級影片",l1d:"航拍展示面積、地段及社區環境；影片導賞讓海外買家同樣安心入市。",
- l2t:"佈置諮詢",l2d:"每個放盤均包括，令買家更願意以足價落實購買。",
- l3t:"中英雙語推廣",l3d:"由第一天起，您的房屋就呈現在萬錦及約克區全體買家面前。",
- l4t:"問題在出現前解決",l4d:"十年建築商人脈，令問題在條件階段之前已被發現。",
- lcta:"預約放盤諮詢",lcta2:"預約 30 分鐘通話",
+ n_std:"我們的標準",n_results:"成交紀錄",n_strat:"您的策略",n_film:"影片",n_about:"關於",n_reviews:"客戶評價",n_cta:"私人諮詢",fab:"私人諮詢",
+ eyebrow:"Kenneth Sek · 經紀 · RE/MAX Realtron",h1:"高於叫價成交，<em>絕非偶然</em>。",
+ sub:"建築商人脈背景、電影級推廣，以及認證談判專家全程把關。Kenneth 81% 的放盤高於叫價成交，平均成交價達叫價的 108.9%。",
+ cta1:"制定我的私人策略",cta2:"查看所有成交",gl:"近期成交",glink:"閱讀個案 →",
+ s1:"Kenneth 放盤的平均成交價佔叫價比例",s2:"高於叫價成交的放盤比例",s3:"2022 年起買賣 53 間房屋",s4:"Google 評分，共 32 則評價",c1:"TRREB 頂尖 0.5% 經紀",
+ stdE:"Kenneth 的標準",stdH:"三件事，決定<em>您的成交價</em>。",stdP:"準備、呈現與談判。點選每一項，了解 Kenneth 如何工作。",
+ pa1:"準備",pa2:"呈現",pa3:"談判",
+ pa1b:"在成為經紀之前，Kenneth 多年來身處大多區建築商及發展商圈子，深明房屋如何定價、建造及銷售。問題在買家發現之前已經解決。",
+ pa2b:"航拍、電影級影片導賞、專業攝影及佈置諮詢，配合中英雙語推廣，同步推出，讓每位合資格買家看到您房屋最好的一面。",
+ pa3b:"認證談判專家由首個出價跟進至成交。結果：81% 的放盤高於叫價成交，平均達叫價的 108.9%。",
+ watch:"觀看放盤影片",fh:"叫價 $1.89M，成交 <em>$2.12M</em>。",ct1:"房屋",ct2:"推廣",ct3:"成績",fcta:"為我的房屋制定同樣方案",
+ rh:"每宗成交，<em>有紀錄可查</em>。",rp:"可篩選、搜尋及排序。每宗成交均列明叫價、成交價及客戶賺取的溢價。",fSold:"放盤成交",fBought:"代客買入",
+ stE:"私人賣家策略",stH:"三個問題，<em>您的方案</em>。",stP:"告訴 Kenneth 您的房屋及目標，了解他會如何定位、準備及推出，並可直接把方案發給他。",
+ fih:"每個家都值得一部<em>影片</em>。",fip:"Kenneth 為每個放盤親自拍攝航拍及電影級影片導賞，並配合專業攝影。買家在預約看房之前，已看清地段、環境及這個家的故事。",
+ fm1:"航拍照片及影片",fm2t:"導賞",fm2:"電影級影片導賞",fm3:"高於叫價 $234,888 成交",fcta2:"為我的房屋拍攝影片",fcta3:"YouTube 更多影片",
+ lh:"配得上您房屋的<em>推廣</em>。",lp:"Kenneth 持有 CLHMS Elite Guild 認證，承諾為豪宅提供更高標準的呈現、推廣及談判。",
+ l1t:"航拍及電影級影片",l1d:"航拍展示面積、地段及社區環境；影片導賞讓海外買家同樣安心入市。",l2t:"佈置諮詢",l2d:"每個放盤均包括，令買家更願意以足價落實購買。",l4t:"問題在出現前解決",l4d:"十年建築商人脈，令問題在條件階段之前已被發現。",lcta:"預約放盤諮詢",lcta2:"預約 30 分鐘通話",
  bh:"接觸每一位<em>合資格</em>買家。",bp:"約克區不少買家以粵語搜尋及決策。Kenneth 以雙語推廣，讓您的房屋不會錯失一半市場。",
  sth:"第一次看房前，<em>已準備就緒</em>。",
  st1:"在擔任經紀之前，Kenneth 多年來與大多區的建築商及發展商共事，深入了解房屋如何定價、定位及銷售。足價成交與白白流失金額之間的差別，往往不是運氣，而是準備、推廣，以及拒絕接受平庸結果的經紀。",
  st2:"他是鐵人三項運動員，清晨五點訓練，規劃每個細節，不達終點不罷休。Kenneth 來自香港，能以粵語及英語服務。",
- vh:"客戶<em>怎麼說</em>。",
- ph:"Kenneth 如何<em>賣您的房屋</em>。",
- p1t:"評估",p1d:"24 小時內，由熟悉您街道的經紀提供真實定價分析。",
- p2t:"準備",p2d:"佈置諮詢、划算的維修，以及拍攝前的完整計劃。",
- p3t:"推廣",p3d:"攝影、航拍、影片及雙語推廣，同步推出。",
- p4t:"談判",p4d:"認證談判專家全程跟進，直至成交。",
- eh:"108.9% 會是<em>怎樣</em>？",ep:"拉動滑桿至預計叫價，查看 Kenneth 平均成交比例的效果。",elab:"叫價",eb1:"以 Kenneth 平均值（108.9%）",eb2:"與叫價的差距",
- ch:"準備為您的房屋賣得<em>更高</em>？",cp:"由了解您的目標與時間表開始。Kenneth 會在 24 小時內親自回覆。",send:"傳送訊息",
- ah:"萬錦<em>各區</em>。",
- n_film:"影片",fih:"每個家都值得一部<em>影片</em>。",fip:"Kenneth 為每個放盤親自拍攝航拍及電影級影片導賞，並配合專業攝影。買家在預約看房之前，已看清地段、環境及這個家的故事。",fm1:"航拍照片及影片",fm2t:"導賞",fm2:"電影級影片導賞",fm3:"高於叫價 $234,888 成交",fcta2:"為我的房屋拍攝影片",fcta3:"YouTube 更多影片"
+ vh:"客戶<em>怎麼說</em>。",eh:"108.9% 會是<em>怎樣</em>？",ep:"拉動滑桿至預計叫價，查看 Kenneth 平均成交比例的效果。",elab:"叫價",eb1:"以 Kenneth 平均值（108.9%）",eb2:"與叫價的差距",
+ ch:"由一次私人<em>對話</em>開始。",cp:"告訴 Kenneth 您的房屋及時間表，他會在 24 小時內親自回覆。",send:"傳送訊息",ah:"萬錦<em>各區</em>。"
 };
-const EN={};
-document.querySelectorAll("[data-i]").forEach(n=>EN[n.dataset.i]=n.innerHTML);
+const EN={};$$("[data-i]").forEach(n=>EN[n.dataset.i]=n.innerHTML);
 function setLang(l){
   document.documentElement.lang=l==="zh"?"zh-HK":"en-CA";
-  document.querySelectorAll("[data-i]").forEach(n=>{const k=n.dataset.i;n.innerHTML=(l==="zh"&&ZH[k])?ZH[k]:EN[k]});
-  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
+  $$("[data-i]").forEach(n=>{const k=n.dataset.i;n.innerHTML=(l==="zh"&&ZH[k])?ZH[k]:EN[k]});
+  $$(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
 }
-document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
+$$(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
 </script>
 </body>
 </html>
