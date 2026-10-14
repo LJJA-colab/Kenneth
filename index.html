@@ -9,6 +9,7 @@
 <meta property="og:image" content="https://kennethsek.com/listing_exterior.png">
 <meta name="theme-color" content="#1A1714">
 <script>document.documentElement.classList.add('js')</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8F%A1%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Sans+HK:wght@400;500;700&display=swap" rel="stylesheet">
@@ -23,17 +24,17 @@
   --max:1200px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent;overflow-x:clip}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{max-width:100%;display:block}
 a{color:inherit}
 button{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--gold-d);outline-offset:3px;border-radius:2px}
 .dk :focus-visible,.nav :focus-visible,footer :focus-visible{outline-color:var(--gold-b)}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 max(28px,env(safe-area-inset-right)) 0 max(28px,env(safe-area-inset-left))}
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em}
-h1{font-size:clamp(3.2rem,8vw,7rem)}
-h2{font-size:clamp(2.3rem,4.8vw,4rem)}
+h1{font-size:clamp(2.7rem,8vw,7rem)}
+h2{font-size:clamp(2.05rem,4.8vw,4rem)}
 h3{font-size:1.7rem;line-height:1.1}
 em{font-style:italic;color:var(--gold-d)}
 .dk{color:#F5F1E8}
@@ -42,7 +43,7 @@ em{font-style:italic;color:var(--gold-d)}
 .lead{font-size:1.15rem;color:var(--mute);max-width:56ch}
 .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-b)}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 1.55rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:.98rem;border:1.5px solid var(--ink);cursor:pointer;background:none;transition:background .25s,color .25s,transform .25s,border-color .25s}
-.btn:hover{transform:translateY(-2px)}
+@media(hover:hover){.btn:hover{transform:translateY(-2px)}}
 .btn.solid{background:var(--ink);color:var(--white)}
 .btn.solid:hover{background:var(--ink-2)}
 .btn.ghost:hover{background:var(--ink);color:var(--white)}
@@ -67,7 +68,7 @@ em{font-style:italic;color:var(--gold-d)}
 @media(pointer:coarse){#cur{display:none}}
 
 /* NAV */
-header.nav{position:sticky;top:0;z-index:50;background:rgba(26,23,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid #3A342B;padding-top:env(safe-area-inset-top,0px)}
+header.nav{position:sticky;top:0;z-index:50;background:rgba(26,23,20,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid #3A342B;padding-top:env(safe-area-inset-top,0px)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
 .brand{display:flex;align-items:center;text-decoration:none}
 .brand img{height:40px;width:auto}
@@ -84,7 +85,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(26,23,20,.92);backdr
 @media(max-width:560px){.nav .btn{display:none}}
 
 /* HERO */
-.hero{position:relative;min-height:min(94vh,900px);display:flex;align-items:flex-end;background:var(--deep);color:#F5F1E8;overflow:hidden;isolation:isolate}
+.hero{position:relative;min-height:min(94vh,900px);min-height:min(94svh,900px);display:flex;align-items:flex-end;background:var(--deep);color:#F5F1E8;overflow:hidden;isolation:isolate}
 .hero .bg{position:absolute;inset:-6% 0;z-index:-2;will-change:transform}
 .hero .bg img{width:100%;height:100%;object-fit:cover}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(15,13,11,.94) 0%,rgba(15,13,11,.72) 48%,rgba(15,13,11,.3) 100%),linear-gradient(0deg,rgba(15,13,11,.92),transparent 45%)}
@@ -93,7 +94,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(26,23,20,.92);backdr
 .hero h1 em{color:var(--gold-b)}
 .hero .sub{font-size:1.2rem;color:#CFC6B4;max-width:52ch;margin-bottom:34px}
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
-.glass{background:rgba(26,23,20,.62);backdrop-filter:blur(14px);border:1px solid rgba(212,174,98,.35);border-radius:10px;padding:26px 28px}
+.glass{background:rgba(26,23,20,.62);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(212,174,98,.35);border-radius:10px;padding:26px 28px}
 .glass small{display:block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-b);font-weight:600}
 .glass .addr{font-family:var(--serif);font-size:1.7rem;line-height:1.1;margin:10px 0 2px}
 .glass .loc{color:var(--mute-d);font-size:.9rem}
@@ -177,7 +178,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(26,23,20,.92);backdr
 .filters{display:flex;gap:8px;flex-wrap:wrap}
 .filters button{font-size:.9rem;font-weight:600;border:1.5px solid var(--stone);background:none;border-radius:999px;padding:.5rem 1.05rem;cursor:pointer;color:var(--mute)}
 .filters button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--white)}
-.tools input,.tools select{font:inherit;font-size:.92rem;padding:.55rem .95rem;border:1.5px solid var(--stone);border-radius:999px;background:var(--paper);color:var(--ink)}
+.tools input,.tools select{font:inherit;font-size:1rem;padding:.55rem .95rem;border:1.5px solid var(--stone);border-radius:999px;background:var(--paper);color:var(--ink)}
 .tools input{min-width:220px}
 .tools .sp{flex:1}
 .table{width:100%;border-collapse:collapse}
@@ -226,7 +227,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(26,23,20,.92);backdr
 
 /* FILM */
 .film{background:var(--deep);text-align:center}
-.film h2{font-size:clamp(3.2rem,8.4vw,7.4rem);line-height:.98;max-width:13ch;margin:0 auto}
+.film h2{font-size:clamp(2.7rem,8.4vw,7.4rem);line-height:.98;max-width:13ch;margin:0 auto}
 .film .lead{margin:30px auto 0;font-size:1.2rem;max-width:54ch}
 .ftabs{display:inline-flex;gap:6px;margin-top:44px;border:1.5px solid #4A4237;border-radius:999px;padding:5px}
 .ftabs button{border:0;background:none;border-radius:999px;padding:.6rem 1.2rem;font-weight:600;color:var(--mute-d);cursor:pointer;font-size:.92rem}
@@ -250,7 +251,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(26,23,20,.92);backdr
 dialog#lb{border:0;background:transparent;max-width:min(94vw,1200px);max-height:92vh;padding:0;overflow:visible}
 dialog#lb::backdrop{background:rgba(15,13,11,.92)}
 dialog#lb img{max-width:94vw;max-height:84vh;border-radius:6px;margin:auto}
-dialog#lb .x{position:absolute;right:-6px;top:-46px;background:none;border:1.5px solid #F5F1E8;color:#F5F1E8;border-radius:999px;padding:.35rem 1rem;cursor:pointer;font-weight:600}
+dialog#lb .x{position:absolute;right:10px;top:10px;background:rgba(15,13,11,.72);border:1.5px solid #F5F1E8;color:#F5F1E8;border-radius:999px;padding:.35rem 1rem;cursor:pointer;font-weight:600}
 dialog#lb p{color:#D8D0BE;text-align:center;margin-top:12px;font-size:.9rem}
 .lux dl{margin-top:30px}
 .lux dt{font-family:var(--serif);font-size:1.55rem;margin-top:22px}
@@ -350,6 +351,138 @@ footer .legal{border-top:1px solid #3A342B;padding-top:22px;font-size:.82rem;lin
   .bar .fill,.panel,.panel .body{transition:none}
   #cur{display:none}
 }
+
+/* ---------- MOBILE / TABLET / DEVICE FLEX ---------- */
+.burger{display:none;width:44px;height:44px;border:1.5px solid #4A4237;border-radius:50%;background:none;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:6px;padding:0}
+.burger span{display:block;width:18px;height:2px;background:#F5F1E8;transition:transform .3s}
+.burger[aria-expanded=true] span:first-child{transform:translateY(4px) rotate(45deg)}
+.burger[aria-expanded=true] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+.mnav{position:fixed;left:0;right:0;bottom:0;top:calc(74px + env(safe-area-inset-top,0px));z-index:49;background:rgba(15,13,11,.985);padding:20px max(28px,env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom,0px)) max(28px,env(safe-area-inset-left));overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:4px}
+.mnav[hidden]{display:none}
+.mnav a.l{font-family:var(--serif);font-size:2.2rem;line-height:1.1;text-decoration:none;color:#F5F1E8;padding:13px 0;border-bottom:1px solid #3A342B}
+.mnav .btn{margin-top:18px;justify-content:center}
+.mnav .btn+.btn{margin-top:10px}
+body.menu{overflow:hidden}
+body.menu #fab{display:none}
+@media(min-width:1001px){.mnav{display:none!important}}
+@media(max-width:1000px){.burger{display:inline-flex}.sec{padding:84px 0}}
+@media(max-width:900px){.hero .wrap{padding-bottom:48px}}
+@media(max-width:760px){
+  .wrap{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+  .hero .wrap{padding-top:64px;gap:30px}
+  .hero .sub{font-size:1.08rem}
+  .hero .cta .btn,.film .cta .btn,.lux .cta .btn{flex:1 1 100%;justify-content:center}
+  .glass{padding:20px 22px;max-width:none}
+  .marq span{font-size:1.2rem;padding:0 20px;gap:40px}
+  .sec{padding:66px 0}
+  .sec-head{margin-bottom:28px}
+  .lang button{min-height:40px;padding:.4rem .85rem}
+  .stat .n{font-size:2.8rem}
+  .creds{gap:14px 24px}.creds img{height:46px}
+  .panel .in{padding:24px}.panel h3{font-size:1.7rem}.panel .num{font-size:3.4rem}
+  .tabs{overflow-x:auto;scrollbar-width:none}.tabs button{padding:.75rem .9rem;white-space:nowrap}
+  .pctbig{font-size:2.6rem}
+  .bar{grid-template-columns:52px 1fr auto;gap:10px;font-size:.88rem}
+  .tools .sp{display:none}.filters{width:100%}.tools select,.tools input{width:100%}
+  .table td.addr{font-size:1.35rem}
+  .sbox{padding:24px 20px;min-height:0}.sbox h3{font-size:1.75rem}.sbox .row .btn{flex:1 1 100%;justify-content:center}
+  .ftabs{display:flex;width:100%}.ftabs button{flex:1;padding:.65rem .4rem}
+  .meta{flex-direction:column;align-items:center;gap:18px}.meta div{text-align:center}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:210px 150px}
+  .gallery button:first-child{grid-row:1;grid-column:1/-1}
+  .band{padding:54px 0}.band .zh{font-size:1.3rem}
+  .score{font-size:4rem}.rev{padding:22px}
+  .contact-grid,.est-grid,.lux-grid,.strat-grid,.story-grid,.case-grid{gap:32px}
+  footer .top{flex-direction:column}
+  .arrows button{width:44px;height:44px}
+  dialog#lb img{max-width:96vw;max-height:78vh}
+}
+@media(max-width:480px){
+  .out{grid-template-columns:1fr}
+  .box b{font-size:1.9rem}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat+.stat{padding-left:16px}.stat{padding-right:12px}
+  .stat .t{font-size:.88rem}
+  .info a{font-size:1.1rem;word-break:break-word}
+  .eyebrow{letter-spacing:.12em;font-size:.72rem}
+}
+@media(max-width:380px){
+  .brand img{height:32px}
+  .lang button{padding:.4rem .65rem}
+  .nav .right{gap:8px}
+  .opts button{padding:.95rem}
+  .hero h1{font-size:2.5rem}
+}
+@media(max-height:520px) and (orientation:landscape){
+  .hero{min-height:auto}.hero .wrap{padding-top:70px;padding-bottom:36px}
+  .mnav a.l{font-size:1.6rem;padding:8px 0}
+}
+@media(min-width:1500px){.wrap{max-width:1320px}body{font-size:18px}}
+@media print{
+  header.nav,.mnav,#fab,#cur,#prog,.marq,.burger{display:none!important}
+  .js .rv{opacity:1!important;transform:none!important}
+  .hero{min-height:auto}body{background:#fff}
+}
+
+/* ---------- THE NET + STORIES ---------- */
+.net-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.net svg{width:100%;height:auto;max-width:580px;margin:0 auto;display:block;overflow:visible}
+.net .web{fill:none;stroke:var(--stone);stroke-width:2}
+.net .sp{stroke:var(--stone);stroke-width:2;stroke-dasharray:6 6;transition:stroke .3s}
+.net .sp.on{stroke:var(--gold);stroke-dasharray:none;stroke-width:3}
+.net .nd{cursor:pointer;outline:none}
+.net .nd circle{fill:var(--white);stroke:var(--stone);stroke-width:2;transition:fill .3s,stroke .3s}
+.net .nd text{font-family:var(--sans);font-weight:600;font-size:18px;fill:var(--ink);pointer-events:none}
+.net .nd:hover circle,.net .nd.on circle{fill:var(--gold);stroke:var(--gold-d)}
+.net .nd:focus-visible circle{stroke:var(--ink);stroke-width:4}
+.net .ctr circle{fill:var(--ink);stroke:var(--gold);stroke-width:3}
+.net .ctr text{font-family:var(--serif);font-size:26px;fill:var(--gold-b)}
+.net .pulse{fill:none;stroke:var(--gold);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:pl 3.2s ease-out infinite}
+@keyframes pl{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.7);opacity:0}}
+.netcard{margin-top:30px;background:var(--white);border:1px solid var(--stone);border-radius:12px;padding:26px 28px;min-height:210px}
+.netcard small{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold-d)}
+.netcard h3{margin:10px 0 10px;font-size:2rem}
+.netcard p{color:var(--mute)}
+.netcard .hint{display:block;margin-top:14px;font-size:.82rem;color:var(--mute)}
+.closed{margin-top:70px;padding-top:34px;border-top:2px solid var(--ink)}
+.closed h3{font-size:2rem}
+.chips button{font:inherit;color:var(--ink);border:1.5px solid var(--ink);background:none;border-radius:999px;padding:.55rem 1.1rem;font-weight:600;font-size:.95rem;cursor:pointer;transition:background .2s,color .2s}
+.chips button:hover{background:var(--ink);color:var(--white)}
+.chips button b{color:var(--gold-d);margin-left:6px}
+.chips button:hover b{color:var(--gold-b)}
+.st-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:36px;align-items:start}
+.st-list{display:flex;flex-direction:column;gap:10px}
+.st-list button{display:grid;grid-template-columns:46px 1fr;gap:12px;align-items:start;text-align:left;background:transparent;border:1.5px solid #3A342B;border-radius:10px;padding:18px 20px;cursor:pointer;color:#F5F1E8;transition:border-color .25s,background .25s}
+.st-list button:hover{border-color:var(--gold-b)}
+.st-list button[aria-selected=true]{border-color:var(--gold);background:rgba(212,174,98,.09)}
+.st-list .n{font-family:var(--serif);font-size:2rem;line-height:1;color:var(--gold-b)}
+.st-list b{display:block;font-weight:600;line-height:1.3}
+.st-list small{display:block;color:var(--mute-d);font-size:.84rem;margin-top:3px}
+.st-pan{background:#221E19;border:1px solid #3A342B;border-radius:12px;padding:38px;display:grid;grid-template-columns:1.3fr .7fr;gap:34px}
+.st-pan.swap{animation:swp .55s cubic-bezier(.2,.7,.2,1)}
+@keyframes swp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.st-pan h3{font-size:clamp(2rem,3.4vw,2.9rem);margin-bottom:18px}
+.st-pan p{color:#D8D0BE;margin:0 0 14px}
+.st-pan blockquote.pull{font-size:1.55rem;border-top:0;border-left:3px solid var(--gold);padding:2px 0 2px 20px;margin:26px 0 0;max-width:none;color:#F5F1E8}
+.st-pan blockquote.pull cite{color:var(--mute-d)}
+.facts{border-left:1px solid #3A342B;padding-left:28px}
+.facts .fh{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-b);font-weight:600;margin-bottom:6px}
+.facts dt{font-size:.82rem;color:var(--mute-d);margin-top:16px}
+.facts dd{font-family:var(--serif);font-size:1.55rem;line-height:1.15}
+.stcta{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.stcta .btn{justify-content:center;text-align:center}
+@media(max-width:1000px){.st-pan{grid-template-columns:1fr}.facts{border-left:0;border-top:1px solid #3A342B;padding:22px 0 0}}
+@media(max-width:900px){
+  .net-grid{grid-template-columns:1fr;gap:34px}
+  .st-grid{grid-template-columns:1fr}
+  .st-list{flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+  .st-list button{flex:0 0 min(250px,78%);scroll-snap-align:start}
+}
+@media(max-width:760px){
+  .st-pan{padding:26px 22px}.netcard{padding:22px}.closed{margin-top:48px}
+  .st-pan blockquote.pull{font-size:1.3rem}
+}
+@media(prefers-reduced-motion:reduce){.net .pulse{animation:none;opacity:0}.st-pan.swap{animation:none}}
 </style>
 </head>
 <body>
@@ -363,11 +496,11 @@ footer .legal{border-top:1px solid #3A342B;padding-top:22px;font-size:.82rem;lin
     </a>
     <nav aria-label="Main">
       <a href="#standard" data-i="n_std">The Standard</a>
+      <a href="#reach" data-i="n_reach">Reach</a>
+      <a href="#stories" data-i="n_stories">Stories</a>
       <a href="#results" data-i="n_results">Results</a>
       <a href="#strategy" data-i="n_strat">Your Strategy</a>
-      <a href="#film" data-i="n_film">Film</a>
       <a href="#story" data-i="n_about">About</a>
-      <a href="#reviews" data-i="n_reviews">Reviews</a>
     </nav>
     <div class="right">
       <div class="lang" role="group" aria-label="Language">
@@ -375,9 +508,22 @@ footer .legal{border-top:1px solid #3A342B;padding-top:22px;font-size:.82rem;lin
         <button type="button" data-lang="zh" aria-pressed="false">中文</button>
       </div>
       <a class="btn gold" href="#contact" data-i="n_cta">Private consultation</a>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
     </div>
   </div>
 </header>
+<div class="mnav" id="mnav" hidden>
+  <a class="l" href="#standard" data-i="n_std">The Standard</a>
+  <a class="l" href="#reach" data-i="n_reach">Reach</a>
+  <a class="l" href="#stories" data-i="n_stories">Stories</a>
+  <a class="l" href="#results" data-i="n_results">Results</a>
+  <a class="l" href="#strategy" data-i="n_strat">Your Strategy</a>
+  <a class="l" href="#film" data-i="n_film">Film</a>
+  <a class="l" href="#story" data-i="n_about">About</a>
+  <a class="l" href="#reviews" data-i="n_reviews">Reviews</a>
+  <a class="btn gold" href="#contact" data-i="n_cta">Private consultation</a>
+  <a class="btn line" href="tel:+14168290081">Call (416) 829-0081</a>
+</div>
 
 <main id="top">
 
@@ -451,6 +597,65 @@ footer .legal{border-top:1px solid #3A342B;padding-top:22px;font-size:.82rem;lin
         <span class="plus" aria-hidden="true">+</span>
         <span class="in"><span class="num">03</span><span><h3 data-i="pa3">Negotiation</h3><span class="body" data-i="pa3b" style="display:block">A Certified Negotiation Expert stays at the table from first offer to closing. The result: 81% of listings sold over asking, averaging 108.9% of list.</span><span class="proof">CNE certified · 108.9% average sale-to-list</span></span></span>
       </button>
+    </div>
+  </div>
+</section>
+
+<!-- THE NET (reach) -->
+<section class="sec net" id="reach">
+  <div class="wrap">
+    <div class="net-grid">
+      <div class="rv">
+        <svg id="net" viewBox="0 0 600 600" role="group" aria-label="Six layers of buyer reach around your home">
+          <polygon class="web" points="300,95 478,198 478,403 300,505 122,403 122,198"/>
+          <polygon class="web" points="300,188 397,244 397,356 300,412 203,356 203,244"/>
+          <line class="sp" x1="300" y1="300" x2="300" y2="95"/>
+          <line class="sp" x1="300" y1="300" x2="478" y2="198"/>
+          <line class="sp" x1="300" y1="300" x2="478" y2="403"/>
+          <line class="sp" x1="300" y1="300" x2="300" y2="505"/>
+          <line class="sp" x1="300" y1="300" x2="122" y2="403"/>
+          <line class="sp" x1="300" y1="300" x2="122" y2="198"/>
+          <circle class="pulse" cx="300" cy="300" r="62"/>
+          <g class="ctr"><circle cx="300" cy="300" r="62"/><text x="300" y="296" text-anchor="middle">Your</text><text x="300" y="324" text-anchor="middle">home</text></g>
+          <g class="nd" tabindex="0" role="button" aria-label="MLS and TRREB"><circle cx="300" cy="95" r="62"/><text x="300" y="91" text-anchor="middle">MLS®</text><text x="300" y="114" text-anchor="middle">&amp; TRREB</text></g>
+          <g class="nd" tabindex="0" role="button" aria-label="English and Cantonese"><circle cx="478" cy="198" r="62"/><text x="478" y="194" text-anchor="middle">English</text><text x="478" y="217" text-anchor="middle">&amp; Cantonese</text></g>
+          <g class="nd" tabindex="0" role="button" aria-label="Drone and film"><circle cx="478" cy="403" r="62"/><text x="478" y="399" text-anchor="middle">Drone</text><text x="478" y="422" text-anchor="middle">&amp; film</text></g>
+          <g class="nd" tabindex="0" role="button" aria-label="Builder network"><circle cx="300" cy="505" r="62"/><text x="300" y="501" text-anchor="middle">Builder</text><text x="300" y="524" text-anchor="middle">network</text></g>
+          <g class="nd" tabindex="0" role="button" aria-label="Professional network"><circle cx="122" cy="403" r="62"/><text x="122" y="399" text-anchor="middle">Professional</text><text x="122" y="422" text-anchor="middle">network</text></g>
+          <g class="nd" tabindex="0" role="button" aria-label="Social and YouTube"><circle cx="122" cy="198" r="62"/><text x="122" y="194" text-anchor="middle">Social</text><text x="122" y="217" text-anchor="middle">&amp; YouTube</text></g>
+        </svg>
+      </div>
+      <div class="rv d1">
+        <span class="eyebrow" style="color:var(--gold-d)" data-i="rcE">Buyer reach</span>
+        <h2 style="margin-top:14px" data-i="rcH">Your buyer is out there. <em>Cast the net wide.</em></h2>
+        <p class="lead" style="margin-top:18px" data-i="rcP">A home sells for more when more qualified buyers see it. Kenneth builds reach in six layers, so your listing is found by buyers in every channel, in both languages.</p>
+        <div class="netcard" aria-live="polite">
+          <small id="netL"></small>
+          <h3 id="netT"></h3>
+          <p id="netD"></p>
+          <span class="hint">Select a layer on the net</span>
+        </div>
+      </div>
+    </div>
+    <div class="closed rv">
+      <h3 data-i="rcC">Where Kenneth has closed</h3>
+      <div class="chips" id="cities"></div>
+      <p class="note">Select an area to see those sales. Counts reflect the sales shown in the results section.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section class="sec stories dk" id="stories">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i="ssE">Stories</span>
+      <h2 style="margin-top:14px" data-i="ssH">Facts tell. <em>Stories sell.</em></h2>
+      <p class="lead" data-i="ssP">The numbers say 108.9%. Behind every percentage is a person making one of the biggest decisions of their year. Here are four of them.</p>
+    </div>
+    <div class="st-grid rv">
+      <div class="st-list" role="tablist" aria-label="Client stories" id="stl"></div>
+      <article class="st-pan" id="stp" role="tabpanel"></article>
     </div>
   </div>
 </section>
@@ -727,6 +932,8 @@ footer .legal{border-top:1px solid #3A342B;padding-top:22px;font-size:.82rem;lin
 </div>
 
 <script>
+if(!("IntersectionObserver" in window)){window.IntersectionObserver=function(cb){this.observe=t=>cb([{isIntersecting:true,target:t}],this);this.unobserve=()=>{};this.disconnect=()=>{}}}
+const FINE=matchMedia("(pointer:fine)").matches;
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const fmt=n=>"$"+Math.round(n).toLocaleString("en-CA");
 const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
@@ -737,7 +944,7 @@ let contactIn=false;
 function onScroll(){
   const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
   prog.style.width=(h>0?y/h*100:0)+"%";
-  if(!RM&&y<innerHeight*1.2)bg.style.transform=`translateY(${y*.18}px)`;
+  if(!RM&&FINE&&y<innerHeight*1.2)bg.style.transform=`translateY(${y*.18}px)`;
   fab.classList.toggle("show",y>innerHeight*.7&&!contactIn);
 }
 addEventListener("scroll",onScroll,{passive:true});onScroll();
@@ -836,6 +1043,92 @@ $$(".filters button").forEach(b=>b.addEventListener("click",()=>{$$(".filters bu
 $("#q").addEventListener("input",e=>{st.q=e.target.value;drawRows()});
 $("#sort").addEventListener("change",e=>{st.sort=e.target.value;drawRows()});
 
+/* ---------- the net: six layers of reach ---------- */
+const CH=[
+ {k:"MLS® & TRREB",t:"Every agent, every search",d:"Your listing reaches every agent and every buyer searching the MLS® across Toronto and York Region, presented properly from the very first click."},
+ {k:"English & Cantonese",t:"Both languages, one market",d:"Many buyers in York Region research and decide in Cantonese. Kenneth markets in English and Cantonese, so your home is not seen by half the market."},
+ {k:"Drone & film",t:"Seen before it is visited",d:"Aerial footage and a cinematic video tour show the scale, the lot and the neighbourhood, and reach remote and international buyers who cannot visit first."},
+ {k:"Builder network",t:"A decade inside the industry",d:"Years inside the builder and developer world mean relationships across the GTA and a deep understanding of how homes are priced, built and sold."},
+ {k:"Professional network",t:"Everyone a sale needs",d:"Lawyers, mortgage brokers and contractors Kenneth already works with, a connection clients mention in their reviews, which keeps a transaction moving."},
+ {k:"Social & YouTube",t:"Where buyers already are",d:"Listing films and market content on YouTube, Instagram and LinkedIn put your home in front of buyers where they already spend their time."}
+];
+const nodes=$$("#net .nd"),spokes=$$("#net .sp");
+function setNode(i){
+  nodes.forEach((n,j)=>n.classList.toggle("on",i===j));
+  spokes.forEach((l,j)=>l.classList.toggle("on",i===j));
+  $("#netL").textContent="Layer "+(i+1)+" of 6 · "+CH[i].k;
+  $("#netT").textContent=CH[i].t;$("#netD").textContent=CH[i].d;
+}
+nodes.forEach((n,i)=>{
+  n.addEventListener("click",()=>setNode(i));
+  n.addEventListener("mouseenter",()=>{if(FINE)setNode(i)});
+  n.addEventListener("focus",()=>setNode(i));
+  n.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();setNode(i)}});
+});
+setNode(0);
+
+/* where Kenneth has closed, counted from the sales above */
+(function(){
+  const cnt={};
+  SALES.forEach(x=>{const c=x.l.split(" · ")[0].split(", ").pop();cnt[c]=(cnt[c]||0)+1});
+  const list=Object.entries(cnt).sort((a,b)=>b[1]-a[1]);
+  $("#cities").innerHTML=list.map(([c,n])=>`<button type="button" data-c="${c}">${c}<b>${n}</b></button>`).join("");
+  $$("#cities button").forEach(b=>b.addEventListener("click",()=>{
+    st.f="all";st.q=b.dataset.c;$("#q").value=b.dataset.c;
+    $$(".filters button").forEach(x=>x.setAttribute("aria-pressed",x.dataset.f==="all"));
+    drawRows();$("#results").scrollIntoView({behavior:RM?"auto":"smooth"});
+  }));
+})();
+
+/* ---------- stories ---------- */
+function goContact(msg){
+  $("#iw").value="Sell my home";$("#msg").value=msg;
+  $("#contact").scrollIntoView({behavior:RM?"auto":"smooth"});
+  setTimeout(()=>$("#fn").focus({preventScroll:true}),700);
+}
+const STORIES=[
+ {n:"01",short:"The house that sold $234,888 over",tag:"Victoria Square · Sold",title:"The house that sold for $234,888 over asking.",
+  body:["In Victoria Square, a five-bedroom home carried more than $300,000 in upgrades: a Gaggenau kitchen, smart-home automation, finishes a buyer has to feel in person.","The risk was that ordinary photos would flatten all of it. So Kenneth staged it, filmed it, and launched it with a plan built to put qualified buyers in front of it together.","It was listed at $1,888,000. It sold for $2,122,888."],
+  pull:"Listed at $1,888,000. Sold at $2,122,888.",by:"",
+  facts:[["Listed","$1,888,000"],["Sold","$2,122,888"],["Over asking","+$234,888 (12.4%)"],["Closed","April 2025"]],
+  link:'<a class="btn gold" href="#case">See the film and the numbers</a>',msg:"I read the Victoria Square story and would like to talk about my own home."},
+ {n:"02",short:"Sold in a week, then bought fast",tag:"Marina I. · Sold & bought",title:"Sold in under a week. The next home found even faster.",
+  body:["Selling one home and buying the next are two moves that have to work together, and that is where plans usually come apart.","For Marina I., Kenneth sold the house above asking in less than a week, then helped find the second home in record speed. The client’s own summary of the experience: smooth and easy."],
+  pull:"Smooth and easy.",by:"Marina I., client review",
+  facts:[["Result","Sold above asking"],["Time to sell","Under a week"],["Then","Second home found"],["Service","Sold & bought"]],
+  link:"",msg:"I read Marina’s story and I am also selling and buying. I would like to talk."},
+ {n:"03",short:"The highest price in the building",tag:"Brandon S. · Condo",title:"The highest price in the building.",
+  body:["In a condo, many units look alike on paper, and buyers compare them line by line. Standing apart takes preparation and presentation, not luck.","For Brandon S., Kenneth sold the condo for the highest price in the building."],
+  pull:"The highest price in the building.",by:"Brandon S., client review",
+  facts:[["Property","Condo"],["Result","Highest price in the building"],["Service","Sold"]],
+  link:"",msg:"I read Brandon’s story and I own a condo. I would like to talk about selling."},
+ {n:"04",short:"First-time buyers, never alone",tag:"Joan C. · Bought, April 2026",title:"First-time buyers who were never left guessing.",
+  body:["Buying a first home brings a long list of questions, and the answers matter.","Joan C. and household asked them all. Kenneth was a quick text or call away with a patient answer each time, and they bought in April 2026."],
+  pull:"Always just a quick text or call away.",by:"Joan C., client review",
+  facts:[["Buyer","First-time"],["Closed","April 2026"],["Support","Text or call, patient answers"]],
+  link:"",msg:"I read Joan’s story and I am a first-time buyer. I would like to talk."}
+];
+const stl=$("#stl"),stp=$("#stp");
+stl.innerHTML=STORIES.map((x,i)=>`<button type="button" role="tab" id="stt${i}" aria-selected="${i===0}" aria-controls="stp" data-k="${i}"><span class="n">${x.n}</span><span><b>${x.short}</b><small>${x.tag}</small></span></button>`).join("");
+function showStory(i,swap){
+  const x=STORIES[i];
+  $$("#stl button").forEach((b,j)=>b.setAttribute("aria-selected",j===i));
+  stp.setAttribute("aria-labelledby","stt"+i);
+  stp.innerHTML=`<div><h3>${x.title}</h3>${x.body.map(t=>`<p>${t}</p>`).join("")}<blockquote class="pull">${x.pull}${x.by?`<cite>${x.by}</cite>`:""}</blockquote></div>
+  <div class="facts"><span class="fh">The facts</span><dl>${x.facts.map(f=>`<dt>${f[0]}</dt><dd>${f[1]}</dd>`).join("")}</dl>
+  <div class="stcta">${x.link}<button type="button" class="btn ${x.link?"line":"gold"}" id="stgo">Start my story</button></div></div>`;
+  $("#stgo").addEventListener("click",()=>goContact(x.msg));
+  if(swap&&!RM){stp.classList.remove("swap");void stp.offsetWidth;stp.classList.add("swap")}
+}
+$$("#stl button").forEach((b,i,all)=>{
+  b.addEventListener("click",()=>showStory(i,true));
+  b.addEventListener("keydown",e=>{
+    const k=e.key;if(!["ArrowDown","ArrowUp","ArrowLeft","ArrowRight"].includes(k))return;
+    e.preventDefault();const n=all[(i+(k==="ArrowDown"||k==="ArrowRight"?1:all.length-1))%all.length];n.focus();showStory(+n.dataset.k,true);
+  });
+});
+showStory(0,false);
+
 /* ---------- strategy builder ---------- */
 const Q=[
  {k:"type",q:"What are you selling?",o:[["detached","Detached home"],["town","Semi or townhouse"],["condo","Condo"],["estate","Luxury estate"]]},
@@ -887,9 +1180,21 @@ $$(".ftabs button").forEach(b=>b.addEventListener("click",()=>{
 
 /* ---------- lightbox ---------- */
 const lb=$("#lb");
-$$("#gal button").forEach(b=>b.addEventListener("click",()=>{$("#lbi").src=b.dataset.src;$("#lbi").alt=b.dataset.cap;$("#lbc").textContent=b.dataset.cap;lb.showModal()}));
+$$("#gal button").forEach(b=>b.addEventListener("click",()=>{$("#lbi").src=b.dataset.src;$("#lbi").alt=b.dataset.cap;$("#lbc").textContent=b.dataset.cap;(typeof lb.showModal==="function")?lb.showModal():window.open(b.dataset.src,"_blank")}));
 $("#lbx").addEventListener("click",()=>lb.close());
 lb.addEventListener("click",e=>{if(e.target===lb)lb.close()});
+
+/* ---------- mobile menu ---------- */
+const burger=$("#burger"),mnav=$("#mnav");
+function setMenu(open){
+  mnav.hidden=!open;burger.setAttribute("aria-expanded",open);
+  burger.setAttribute("aria-label",open?"Close menu":"Open menu");
+  document.body.classList.toggle("menu",open);
+}
+burger.addEventListener("click",()=>setMenu(mnav.hidden));
+$$("a",mnav).forEach(a=>a.addEventListener("click",()=>setMenu(false)));
+addEventListener("keydown",e=>{if(e.key==="Escape"&&!mnav.hidden){setMenu(false);burger.focus()}});
+addEventListener("resize",()=>{if(innerWidth>1000&&!mnav.hidden)setMenu(false)});
 
 /* ---------- reviews carousel ---------- */
 const car=$("#car");
@@ -945,7 +1250,12 @@ const ZH={
  st1:"在擔任經紀之前，Kenneth 多年來與大多區的建築商及發展商共事，深入了解房屋如何定價、定位及銷售。足價成交與白白流失金額之間的差別，往往不是運氣，而是準備、推廣，以及拒絕接受平庸結果的經紀。",
  st2:"他是鐵人三項運動員，清晨五點訓練，規劃每個細節，不達終點不罷休。Kenneth 來自香港，能以粵語及英語服務。",
  vh:"客戶<em>怎麼說</em>。",eh:"108.9% 會是<em>怎樣</em>？",ep:"拉動滑桿至預計叫價，查看 Kenneth 平均成交比例的效果。",elab:"叫價",eb1:"以 Kenneth 平均值（108.9%）",eb2:"與叫價的差距",
- ch:"由一次私人<em>對話</em>開始。",cp:"告訴 Kenneth 您的房屋及時間表，他會在 24 小時內親自回覆。",send:"傳送訊息",ah:"萬錦<em>各區</em>。"
+ ch:"由一次私人<em>對話</em>開始。",cp:"告訴 Kenneth 您的房屋及時間表，他會在 24 小時內親自回覆。",send:"傳送訊息",ah:"萬錦<em>各區</em>。",
+ n_reach:"覆蓋",n_stories:"故事",
+ rcE:"買家覆蓋",rcH:"您的買家就在外面，<em>把網撒開</em>。",
+ rcP:"房屋被越多合資格買家看到，成交價就越高。Kenneth 以六個層面建立覆蓋，讓您的放盤在每個渠道、以兩種語言被買家發現。",rcC:"Kenneth 曾成交的地區",
+ ssE:"故事",ssH:"數字說明事實，<em>故事打動人心</em>。",
+ ssP:"數字是 108.9%。每個百分比背後，都是一個人在做一年中最重大的決定之一。以下是其中四個。"
 };
 const EN={};$$("[data-i]").forEach(n=>EN[n.dataset.i]=n.innerHTML);
 function setLang(l){
