@@ -450,6 +450,10 @@ body.menu #fab{display:none}
 .chips button:hover{background:var(--ink);color:var(--white)}
 .chips button b{color:var(--gold-d);margin-left:6px}
 .chips button:hover b{color:var(--gold-b)}
+.stories{background:var(--ink)}
+.stories h2{color:#F5F1E8}
+.stories .lead{color:#C4BAA8}
+.st-list small{color:#C4BAA8}
 .st-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:36px;align-items:start}
 .st-list{display:flex;flex-direction:column;gap:10px}
 .st-list button{display:grid;grid-template-columns:46px 1fr;gap:12px;align-items:start;text-align:left;background:transparent;border:1.5px solid #3A342B;border-radius:10px;padding:18px 20px;cursor:pointer;color:#F5F1E8;transition:border-color .25s,background .25s}
@@ -537,7 +541,7 @@ body.menu #fab{display:none}
       <p class="sub" data-i="sub">A builder-network background, cinematic marketing and a Certified Negotiation Expert at the table. 81% of Kenneth’s listings sold over asking, averaging 108.9% of list price.</p>
       <div class="cta">
         <a class="btn gold" href="#strategy" data-i="cta1">Build my private strategy</a>
-        <a class="btn line" href="#results" data-i="cta2">Explore every sale</a>
+        <a class="btn line" href="#results" data-i="cta2">See recent results</a>
       </div>
     </div>
     <aside class="glass" aria-label="Recent result">
@@ -638,9 +642,9 @@ body.menu #fab{display:none}
       </div>
     </div>
     <div class="closed rv">
-      <h3 data-i="rcC">Where Kenneth has closed</h3>
+      <h3 data-i="rcC">Recent sales by area</h3>
       <div class="chips" id="cities"></div>
-      <p class="note">Select an area to see those sales. Counts reflect the sales shown in the results section.</p>
+      <p class="note">Select an area to see a selection of recent sales there. Not a complete list of areas or sales.</p>
     </div>
   </div>
 </section>
@@ -697,8 +701,8 @@ body.menu #fab{display:none}
 <section class="sec ledger" id="results">
   <div class="wrap">
     <div class="sec-head rv">
-      <h2 data-i="rh">Every result, <em>on the record.</em></h2>
-      <p class="lead" data-i="rp">Filter, search and sort. Each sale shows the list price, the sold price and the premium Kenneth’s clients earned.</p>
+      <h2 data-i="rh">Recent results, <em>on the record.</em></h2>
+      <p class="lead" data-i="rp">A selection of recent results. Filter, search and sort to see the sold price and, where available, the premium over asking.</p>
     </div>
     <div class="tools">
       <div class="filters" role="group" aria-label="Filter sales">
@@ -719,7 +723,7 @@ body.menu #fab{display:none}
       <thead><tr><th>Address</th><th>Type</th><th>Price</th><th>Result</th><th>Date</th></tr></thead>
       <tbody id="rows"></tbody>
     </table>
-    <p class="note">Showing a selection of recent sales. Sale-to-list figures are based on the 16 listings with both a list and a sold price. Totals include all 53 homes, 2022 to 2026. <a href="https://kennethsek.com/results.html" target="_blank" rel="noopener">See all sales</a>. Past results do not guarantee future results.</p>
+    <p class="note">These are a selection of recent results, not Kenneth’s complete sales record. The 108.9% average is based on 16 listings with both a list and a sold price, and the overall totals ($63M, 53 homes, 2022 to 2026) include sales not shown here. <a href="https://kennethsek.com/results.html" target="_blank" rel="noopener">See more results</a>. Past results do not guarantee future results.</p>
   </div>
 </section>
 
@@ -1067,12 +1071,12 @@ nodes.forEach((n,i)=>{
 });
 setNode(0);
 
-/* where Kenneth has closed, counted from the sales above */
+/* area chips built from the recent sales shown (no counts, not a complete list) */
 (function(){
   const cnt={};
   SALES.forEach(x=>{const c=x.l.split(" · ")[0].split(", ").pop();cnt[c]=(cnt[c]||0)+1});
   const list=Object.entries(cnt).sort((a,b)=>b[1]-a[1]);
-  $("#cities").innerHTML=list.map(([c,n])=>`<button type="button" data-c="${c}">${c}<b>${n}</b></button>`).join("");
+  $("#cities").innerHTML=list.map(([c,n])=>`<button type="button" data-c="${c}">${c}</button>`).join("");
   $$("#cities button").forEach(b=>b.addEventListener("click",()=>{
     st.f="all";st.q=b.dataset.c;$("#q").value=b.dataset.c;
     $$(".filters button").forEach(x=>x.setAttribute("aria-pressed",x.dataset.f==="all"));
@@ -1231,7 +1235,7 @@ const ZH={
  n_std:"我們的標準",n_results:"成交紀錄",n_strat:"您的策略",n_film:"影片",n_about:"關於",n_reviews:"客戶評價",n_cta:"私人諮詢",fab:"私人諮詢",
  eyebrow:"Kenneth Sek · 經紀 · RE/MAX Realtron",h1:"高於叫價成交，<em>絕非偶然</em>。",
  sub:"建築商人脈背景、電影級推廣，以及認證談判專家全程把關。Kenneth 81% 的放盤高於叫價成交，平均成交價達叫價的 108.9%。",
- cta1:"制定我的私人策略",cta2:"查看所有成交",gl:"近期成交",glink:"閱讀個案 →",
+ cta1:"制定我的私人策略",cta2:"查看近期成交",gl:"近期成交",glink:"閱讀個案 →",
  s1:"Kenneth 放盤的平均成交價佔叫價比例",s2:"高於叫價成交的放盤比例",s3:"2022 年起買賣 53 間房屋",s4:"Google 評分，共 32 則評價",c1:"TRREB 頂尖 0.5% 經紀",
  stdE:"Kenneth 的標準",stdH:"三件事，決定<em>您的成交價</em>。",stdP:"準備、呈現與談判。點選每一項，了解 Kenneth 如何工作。",
  pa1:"準備",pa2:"呈現",pa3:"談判",
@@ -1239,7 +1243,7 @@ const ZH={
  pa2b:"航拍、電影級影片導賞、專業攝影及佈置諮詢，配合中英雙語推廣，同步推出，讓每位合資格買家看到您房屋最好的一面。",
  pa3b:"認證談判專家由首個出價跟進至成交。結果：81% 的放盤高於叫價成交，平均達叫價的 108.9%。",
  watch:"觀看放盤影片",fh:"叫價 $1.89M，成交 <em>$2.12M</em>。",ct1:"房屋",ct2:"推廣",ct3:"成績",fcta:"為我的房屋制定同樣方案",
- rh:"每宗成交，<em>有紀錄可查</em>。",rp:"可篩選、搜尋及排序。每宗成交均列明叫價、成交價及客戶賺取的溢價。",fSold:"放盤成交",fBought:"代客買入",
+ rh:"近期成交，<em>有紀錄可查</em>。",rp:"以下為部分近期成交。可篩選、搜尋及排序，查看成交價及（如適用）高於叫價的溢價。",fSold:"放盤成交",fBought:"代客買入",
  stE:"私人賣家策略",stH:"三個問題，<em>您的方案</em>。",stP:"告訴 Kenneth 您的房屋及目標，了解他會如何定位、準備及推出，並可直接把方案發給他。",
  fih:"每個家都值得一部<em>影片</em>。",fip:"Kenneth 為每個放盤親自拍攝航拍及電影級影片導賞，並配合專業攝影。買家在預約看房之前，已看清地段、環境及這個家的故事。",
  fm1:"航拍照片及影片",fm2t:"導賞",fm2:"電影級影片導賞",fm3:"高於叫價 $234,888 成交",fcta2:"為我的房屋拍攝影片",fcta3:"YouTube 更多影片",
@@ -1253,7 +1257,7 @@ const ZH={
  ch:"由一次私人<em>對話</em>開始。",cp:"告訴 Kenneth 您的房屋及時間表，他會在 24 小時內親自回覆。",send:"傳送訊息",ah:"萬錦<em>各區</em>。",
  n_reach:"覆蓋",n_stories:"故事",
  rcE:"買家覆蓋",rcH:"您的買家就在外面，<em>把網撒開</em>。",
- rcP:"房屋被越多合資格買家看到，成交價就越高。Kenneth 以六個層面建立覆蓋，讓您的放盤在每個渠道、以兩種語言被買家發現。",rcC:"Kenneth 曾成交的地區",
+ rcP:"房屋被越多合資格買家看到，成交價就越高。Kenneth 以六個層面建立覆蓋，讓您的放盤在每個渠道、以兩種語言被買家發現。",rcC:"近期成交地區",
  ssE:"故事",ssH:"數字說明事實，<em>故事打動人心</em>。",
  ssP:"數字是 108.9%。每個百分比背後，都是一個人在做一年中最重大的決定之一。以下是其中四個。"
 };
